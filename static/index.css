@@ -23,7 +23,7 @@ body{
     margin-top: 100px;
 }
 
-.header{
+.header-container{
     display: flex;
     align-items: center;
     justify-content: center;
