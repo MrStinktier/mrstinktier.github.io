@@ -24,11 +24,11 @@ body{
 }
 
 .headline-container{
+    display: flex;
     justify-content: center;
-    background-color: aqua;
 }
 
 .headline{
     position: absolute;
-    margin-top: 10px;
+    margin-top: 50px;
 }
