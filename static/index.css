@@ -18,21 +18,18 @@ body{
     width: 700px;
     height: 300px;
     background-color: #232931;
-
+    color: #fff;
     border-radius: 25px;
     margin-top: 100px;
 }
 
-.header-container{
-    width: 700px;
-    height: 300px;
-    color: #fff;
-    background-color: aqua;
+.headline-container{
     display: flex;
-    align-items: center;
     justify-content: center;
+    background-color: aqua;
 }
 
-.header{
-    margin-top: 10px;
+.headline{
+    position: absolute;
+    margin-top: 50px;
 }
