@@ -24,8 +24,7 @@ body{
 }
 
 .header-container{
-    background-color: #fff;
-    margin-top: 200px;
+    margin-top: 2000px;
     display: flex;
     align-items: center;
     justify-content: center;
