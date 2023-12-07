@@ -36,9 +36,14 @@ body{
 .links{
     display: flex;
     justify-content: center;
-    margin-top: 10px;    
+    margin-top: 10px;
+    height: 100px;
 }
 
-.links-table{
+.link1-text, .link2-text{
     position: absolute;
+}
+
+.link2-text{
+    margin-top: 20px;
 }
