@@ -32,3 +32,13 @@ body{
 .headline{
     position: absolute;
 }
+
+.links{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;    
+}
+
+.links-table{
+    position: absolute;
+}
