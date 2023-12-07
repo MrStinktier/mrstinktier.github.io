@@ -6,13 +6,23 @@
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="index.css"/>
         <title>Youtube Downloader</title>
+
+
+        <link rel="stylesheet" href="https://pyscript.net/releases/2023.05.1/pyscript.css" />
+        <script defer src="https://pyscript.net/releases/2023.05.1/pyscript.js"></script>
+        <py-config>
+            packages = ["pytube", "flask"]
+            [[fetch]]
+            files = ["./index.py"]
+        </py-config>
     </head>
     <body>
         <div class="container">
             <div class="header-container">
                 <h1 class="header">Hello World</h1>
             </div>
+            <button py-click="Youtube_Downloader()">Submit</button>
+            <py-script src="index.py"></py-script>
         </div>
     </body>
-    <script href="index.py"></script>
 </html>
