@@ -34,7 +34,7 @@ def Youtube_Downloader():
 #    Format = request.form.get("File")
 #    print(URL)
 #    print(Format)
-    try:
+    #try:
         URL = "https://www.youtube.com/watch?v=OUoeZTJzcyY"
         Format = "MP4"
         yt = YouTube(str(URL))
@@ -49,8 +49,8 @@ def Youtube_Downloader():
             yd.download("./Dateien", filename=f"{yt.title}.mp3")
             name=yt.title+".mp3"
             print(name)
-    except Exception as e:
-        print(e)
+    #except Exception as e:
+    #    print(e)
 #    try:
 #        return redirect("/Youtube-Downloader/"+name)
 #        return send_file("./Dateien/"+name, as_attachment=True)
