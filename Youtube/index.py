@@ -1,6 +1,7 @@
 #from flask import render_template, send_file, Flask
 from pytube import YouTube
 from pyscript import *
+import urllib.request
 
 #app = Flask(__name__)
 def Youtube_Downloader():
@@ -8,11 +9,10 @@ def Youtube_Downloader():
 #    Format = request.form.get("File")
 #    print(URL)
 #    print(Format)
-    #try:
+    try:
         URL = "https://www.youtube.com/watch?v=OUoeZTJzcyY"
         Format = "MP4"
         yt = YouTube(str(URL))
-        audio = yt.streams.filter(only_audio = True).first()
         yd = yt.streams.get_highest_resolution()
         print(URL)
         print(Format)
@@ -21,11 +21,11 @@ def Youtube_Downloader():
             name=yt.title+".mp4"
             print(name)
         else:
-            audio.download("./Dateien", filename=f"{yt.title}.mp3")
+            yd.download("./Dateien", filename=f"{yt.title}.mp3")
             name=yt.title+".mp3"
             print(name)
-    #except:
-        print("fail")
+    except Exception as e:
+        print(e)
 #    try:
 #        return redirect("/Youtube-Downloader/"+name)
 #        return send_file("./Dateien/"+name, as_attachment=True)
