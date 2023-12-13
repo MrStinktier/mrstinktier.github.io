@@ -1,10 +1,35 @@
+from __future__ import unicode_literals
 #from flask import render_template, send_file, Flask
 from pytube import YouTube
 from pyscript import *
-import urllib.request
+#import urllib.request
+import youtube_dl
 
 #app = Flask(__name__)
 def Youtube_Downloader():
+
+    class MyLogger(object):
+        def debug(self, msg):
+            pass
+
+        def warning(self, msg):
+            pass
+
+        def error(self, msg):
+            print(msg)
+
+    ydl_opts = {
+    'format': 'bestaudio/best',
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    }],
+    'logger': MyLogger(),
+    }
+    
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download(['https://www.youtube.com/watch?v=BaW_jenozKc'])
 #    URL = request.form.get("youtube-url")
 #    Format = request.form.get("File")
 #    print(URL)
