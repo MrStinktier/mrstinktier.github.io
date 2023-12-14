@@ -7,22 +7,50 @@
         <link rel="stylesheet" href="index.css"/>
         <title>Youtube Downloader</title>
 
+        <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
 
-        <link rel="stylesheet" href="https://pyscript.net/releases/2023.05.1/pyscript.css" />
+        <!--<link rel="stylesheet" href="https://pyscript.net/releases/2023.05.1/pyscript.css" />
         <script defer src="https://pyscript.net/releases/2023.05.1/pyscript.js"></script>
         <py-config>
             packages = ["pytube", "flask"]
             [[fetch]]
             files = ["./index.py"]
-        </py-config>
+        </py-config>-->
     </head>
     <body>
         <div class="container">
             <div class="header-container">
                 <h1 class="header">Hello World</h1>
             </div>
-            <button py-click="Youtube_Downloader()">Submit</button>
-            <py-script src="index.py"></py-script>
+            <button py-click="Youtube_Downloader">Submit</button>
+            <script type="py" src="./index.py" config="./pyscript.json"></script>
+            <!--<py-script src="index.py"></py-script>-->
         </div>
+        <script>
+            let installPrompt = null;
+            const installSection = document.querySelector("#install-pwa-section")
+            const installButton = document.querySelector("#install-pwa");
+            
+            window.addEventListener("beforeinstallprompt", (event) => {
+              if ("onappinstalled" in window) {
+                installSection.removeAttribute("hidden")
+              }
+              event.preventDefault();
+              installPrompt = event;
+            });
+            
+            installButton.addEventListener("click", async () => {
+              if (!installPrompt) {
+                return;
+              }
+              const result = await installPrompt.prompt();
+              disableInAppInstallPrompt();
+            });
+            
+            function disableInAppInstallPrompt() {
+              installPrompt = null;
+              installButton.setAttribute("hidden", "");
+            };
+            </script>
     </body>
 </html>
