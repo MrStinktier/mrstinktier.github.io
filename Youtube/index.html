@@ -12,33 +12,6 @@
           <div class="header-container">
               <h1 class="header">Hello World</h1>
           </div>
-          <button>Submit</button>
         </div>
-        <script>
-            let installPrompt = null;
-            const installSection = document.querySelector("#install-pwa-section")
-            const installButton = document.querySelector("#install-pwa");
-            
-            window.addEventListener("beforeinstallprompt", (event) => {
-              if ("onappinstalled" in window) {
-                installSection.removeAttribute("hidden")
-              }
-              event.preventDefault();
-              installPrompt = event;
-            });
-            
-            installButton.addEventListener("click", async () => {
-              if (!installPrompt) {
-                return;
-              }
-              const result = await installPrompt.prompt();
-              disableInAppInstallPrompt();
-            });
-            
-            function disableInAppInstallPrompt() {
-              installPrompt = null;
-              installButton.setAttribute("hidden", "");
-            };
-            </script>
     </body>
 </html>
