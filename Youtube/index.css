@@ -25,7 +25,7 @@ body{
 }
 
 .Youtube-URL-Pack{
-    margin-top: 50px;
+    margin-top: 40px;
     margin-left: 150px;
     width: 100px;
     height: 15px;
@@ -61,7 +61,7 @@ input[type=text]{
 }
 
 .Dropdown-Pack{
-    margin-top: 40px;
+    margin-top: 75px;
     margin-left: 135px;
     width: 125px;
     display: flex;
