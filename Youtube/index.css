@@ -11,24 +11,98 @@ body{
     background-color: #37474f;
     height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 .container{
-    width: 700px;
-    height: 600px;
+    height: 300px;
     background-color: #232931;
     color: #fff;
     border-radius: 25px;
-    margin-top: 100px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
 }
 
-.header-container{
+.Youtube-URL-Pack{
+    width: 400px;
+    height: 100px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    cursor: pointer;
 }
 
-.headline{
+.Youtube-URL{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Youtube-Url-input{
+    align-self: center;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    margin-top: 90px;
+    width: 300px;
+}
+
+input[type=text]{
+    background-color: #232931;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
+    border-radius: 25px;
+    border: none;
+}
+
+.Dropdown-Pack{
+    width: 400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Dropdown-label{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1px;
+}
+
+.Dropdown{
+    position: absolute;
+    align-self: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 90px;
+    width: 100px;
+
+}
+
+.submitbutton-Pack{
+    width: 400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.submitbutton{
+    position: absolute;
+    margin-top: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    background-color: #232931;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 25px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
 }

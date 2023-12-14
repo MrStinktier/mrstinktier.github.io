@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="index.css"/>
-        <title>Youtube Downloader</title>
-    </head>
-    <body>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Youtube-Downloader.css') }}"/>
+    <title>Youtube Video Downloader</title>
+</head>
+
+<body>
+    <form method="POST">
         <div class="container">
-          <div class="header-container">
-              <h1 class="header">Hello World</h1>
-          </div>
+            <div class="Youtube-URL-Pack">
+                <div class="Youtube-URL">
+                    <label for="youtube-url"><b>Youtube URL</b></label>
+                </div>
+                <div class="Youtube-Url-input">
+                    <input type="text" placeholder="Enter Youtube URL" name="youtube-url" id="youtube-url" required>
+                </div>
+            </div>
+            <div class="Dropdown-Pack">
+                <div class="dropdown-label">
+                    <label for="Download-type">Choose a Format</label>
+                </div>
+                <div class="Dropdown">
+                    <select name="File" id="Download-type">
+                        <option value="MP4">MP4</option>
+                        <option value="MP3">MP3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="submitbutton-Pack">
+                <button type="submit" class="submitbutton">Submit</button>
+            </div>
         </div>
-    </body>
+    </form>
+</body>
 </html>
