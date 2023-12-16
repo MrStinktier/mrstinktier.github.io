@@ -4,6 +4,7 @@ const ytdl = require('ytdl-core');
 const app = express();
 const PORT = 4000;
 
+
 app.use(cors());
 
 app.listen(PORT, () => {
@@ -16,7 +17,8 @@ app.get('/downloadmp3', async (req, res, next) => {
 		if(!ytdl.validateURL(url)) {
 			return res.sendStatus(400);
 		}
-		let title = 'audio';
+
+        let title = "audio";
 
 		await ytdl.getBasicInfo(url, {
 			format: 'mp4'
@@ -42,7 +44,8 @@ app.get('/downloadmp4', async (req, res, next) => {
 		if(!ytdl.validateURL(url)) {
 			return res.sendStatus(400);
 		}
-		let title = "video"
+
+		let title = "video";
 
 		await ytdl.getBasicInfo(url, {
 			format: 'mp4'
