@@ -1,4 +1,4 @@
-let convertBtn = document.getElementById('submitButton');
+let convertBtn = document.getElementById('submitButtonid');
 let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
 let serverURL = 'http://localhost:4000'
