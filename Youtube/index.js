@@ -3,7 +3,7 @@ let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
 let serverURL = 'http://localhost:4000'
 
-Btn.addEventListener('click', () => {
+convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
 		alert('Enter YouTube URL');
 	} else {
