@@ -42,7 +42,7 @@ app.get('/downloadmp4', async (req, res, next) => {
 		if(!ytdl.validateURL(url)) {
 			return res.sendStatus(400);
 		}
-		let title = 'video';
+		let title = "video"
 
 		await ytdl.getBasicInfo(url, {
 			format: 'mp4'
