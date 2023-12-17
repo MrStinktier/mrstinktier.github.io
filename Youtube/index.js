@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+=======
+//import * as cors from "cors";
+//import * as express from "express";
+//import * as ytdl from "ytdl-core";
+
+//const app = express();
+
+>>>>>>> 5b3e1db98203612331a5fb8eae14e63ad7f2911e
 let convertBtn = document.getElementById('submitButtonid');
 let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
-let serverURL = 'http://localhost:4000'
+let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev'
 
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
