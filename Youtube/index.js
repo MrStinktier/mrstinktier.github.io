@@ -1,11 +1,7 @@
 let convertBtn = document.getElementById('submitButtonid');
 let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
-<<<<<<< HEAD
-let serverURL = 'http://192.168.1.100:4000'
-=======
 let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev'
->>>>>>> 4db4a9256206fccf2fd74921902fd4a48976997e
 
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
