@@ -1,9 +1,9 @@
 {
   "name": "mrstinktier.github.io",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "Youtube/Server/Server.js",
   "scripts": {
-    "index": "node ./Youtube/Server/Server.js"
+    "test": "echo looser"
   },
   "repository": {
     "type": "git",
