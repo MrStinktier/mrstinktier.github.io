@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "Youtube/Server/Server.js",
   "scripts": {
-    "test": "echo looser"
+    "start": "npx snowpack dev",
+    "test": "echo Error: no test specified && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,12 @@
   "homepage": "https://github.com/MrStinktier/mrstinktier.github.io#readme",
   "description": "",
   "dependencies": {
+    "browserify": "^17.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "ytdl-core": "^4.11.5"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.8"
   }
 }
