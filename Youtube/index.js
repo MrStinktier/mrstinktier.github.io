@@ -1,6 +1,6 @@
-import * as cors from "cors";
-import * as express from "express";
-import * as ytdl from "ytdl-core";
+//import * as cors from "cors";
+//import * as express from "express";
+//import * as ytdl from "ytdl-core";
 
 const app = express();
 
