@@ -56,7 +56,7 @@ app.get('/downloadmp4', async (req, res, next) => {
 		res.header('Content-Disposition', `attachment; filename="${title}.mp4"`);
 		ytdl(url, {
 			format: 'mp4',
-			filter: "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio"
+			filter: "highestvideo"
 		}).pipe(res);
 
 	} catch (err) {
