@@ -28,13 +28,13 @@ async function downloadMp3(query) {
 }
 
 async function downloadMp4(query) {
-	const res = await fetch(`${serverURL}/downloadmp4?url=${query}`);
-	if(res.status == 200) {
+	//const res = await fetch(`${serverURL}/downloadmp4?url=${query}`);
+	//if(res.status == 200) {
 		var a = document.createElement('a');
   		a.href = `${serverURL}/downloadmp4?url=${query}`;
-  		a.setAttribute('link', '');
+  		a.setAttribute('download', '');
 		a.click();
-	} else if(res.status == 400) {
-		alert('Invalid url');
-	}
+	//} else if(res.status == 400) {
+	//	alert('Invalid url');
+	//}
 }
