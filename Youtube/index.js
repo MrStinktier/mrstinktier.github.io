@@ -1,6 +1,6 @@
-import _ from "cors";
-import _ from "express";
-import _ from "ytdl-core";
+import * as cors from "cors";
+import * as express from "express";
+import * as ytdl from "ytdl-core";
 
 const app = express();
 
@@ -21,15 +21,30 @@ convertBtn.addEventListener('click', () => {
 	}
 });
 
-async function downloadMp3(query) {
-	const res = await fetch(`${serverURL}/downloadmp3?url=${query}`);
-	if(res.status == 200) {
-		var a = document.createElement('a');
-  		a.href = `${serverURL}/downloadmp3?url=${query}`;
-  		a.setAttribute('download', '');
-		a.click();
-	} else if(res.status == 400) {
-		alert('Invalid url');
+async function downloadMp3() {
+	try {
+		var url = URLinput.value;
+		if(!ytdl.validateURL(url)) {
+			return res.sendStatus(400);
+		}
+
+        let title = "audio";
+
+		await ytdl.getBasicInfo(url, {
+			format: 'mp4'
+		}, (err, info) => {
+			if (err) throw err;
+			title = info.player_response.videoDetails.title.replace(/[^\x00-\x7F]/g, "");
+		});
+
+		res.header('Content-Disposition', `attachment; filename="${title}.mp3"`);
+		ytdl(url, {
+			format: 'mp3',
+			filter: 'audioonly',
+		}).pipe(res);
+
+	} catch (err) {
+		console.error(err);
 	}
 }
 
