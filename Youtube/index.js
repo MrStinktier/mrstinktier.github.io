@@ -16,25 +16,33 @@ convertBtn.addEventListener('click', () => {
 });
 
 async function downloadMp3(query) {
-	const res = await fetch(`${serverURL}/downloadmp3?url=${query}`);
-	if(res.status == 200) {
+	//const res = await fetch(`${serverURL}/downloadmp3?url=${query}`);
+	//if(res.status == 200) {
+		try{
 		var a = document.createElement('a');
   		a.href = `${serverURL}/downloadmp3?url=${query}`;
   		a.setAttribute('download', '');
 		a.click();
-	} else if(res.status == 400) {
-		alert('Invalid url');
-	}
+		}catch{
+			alert("Try Again")
+		}
+	//} else if(res.status == 400) {
+	//	alert('Invalid url');
+	//}
 }
 
 async function downloadMp4(query) {
-	const res = await fetch(`${serverURL}/downloadmp4?url=${query}`);
-	if(res.status == 200) {
+	//const res = await fetch(`${serverURL}/downloadmp4?url=${query}`);
+	//if(res.status == 200) {
+		try{
 		var a = document.createElement('a');
   		a.href = `${serverURL}/downloadmp4?url=${query}`;
-  		a.setAttribute('link', '');
+  		a.setAttribute('download', '');
 		a.click();
-	} else if(res.status == 400) {
-		alert('Invalid url');
-	}
+		}catch{
+			alert("Try Again")
+		}
+	//} else if(res.status == 400) {
+	//	alert('Invalid url');
+	//}
 }
