@@ -21,7 +21,7 @@ app.get('/downloadmp3', async (req, res, next) => {
         let title = "audio";
 
 		await ytdl.getBasicInfo(url, {
-			format: 'mp4'
+			format: 'mp3'
 		}, (err, info) => {
 			if (err) throw err;
 			title = info.player_response.videoDetails.title.replace(/[^\x00-\x7F]/g, "");
@@ -31,7 +31,6 @@ app.get('/downloadmp3', async (req, res, next) => {
 		ytdl(url, {
 			format: 'mp3',
 			filter: 'audioonly',
-			quality: 'highestaudio'
 		}).pipe(res);
 
 	} catch (err) {
