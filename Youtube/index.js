@@ -1,13 +1,11 @@
-//import * as cors from "cors";
-//import * as express from "express";
-//import * as ytdl from "ytdl-core";
-
-//const app = express();
-
 let convertBtn = document.getElementById('submitButtonid');
 let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
+<<<<<<< HEAD
 let serverURL = 'http://192.168.1.100:4000'
+=======
+let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev'
+>>>>>>> 4db4a9256206fccf2fd74921902fd4a48976997e
 
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
@@ -22,25 +20,33 @@ convertBtn.addEventListener('click', () => {
 });
 
 async function downloadMp3(query) {
-	const res = await fetch(`${serverURL}/downloadmp3?url=${query}`);
-	if(res.status == 200) {
+	//const res = await fetch(`${serverURL}/downloadmp3?url=${query}`);
+	//if(res.status == 200) {
+		try{
 		var a = document.createElement('a');
   		a.href = `${serverURL}/downloadmp3?url=${query}`;
   		a.setAttribute('download', '');
 		a.click();
-	} else if(res.status == 400) {
-		alert('Invalid url');
-	}
+		}catch{
+			alert("Try Again")
+		}
+	//} else if(res.status == 400) {
+	//	alert('Invalid url');
+	//}
 }
 
 async function downloadMp4(query) {
-	const res = await fetch(`${serverURL}/downloadmp4?url=${query}`);
-	if(res.status == 200) {
+	//const res = await fetch(`${serverURL}/downloadmp4?url=${query}`);
+	//if(res.status == 200) {
+		try{
 		var a = document.createElement('a');
   		a.href = `${serverURL}/downloadmp4?url=${query}`;
   		a.setAttribute('download', '');
 		a.click();
-	} else if(res.status == 400) {
-		alert('Invalid url');
-	}
+		}catch{
+			alert("Try Again")
+		}
+	//} else if(res.status == 400) {
+	//	alert('Invalid url');
+	//}
 }
