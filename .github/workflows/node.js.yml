@@ -34,5 +34,5 @@ jobs:
       matrix:
         node-version: [14.x, 16.x, 18.x]
 
-        steps:
-          - run: node Youtube/Server/Server.js
+    steps:
+    - run: node Youtube/Server/Server.js
