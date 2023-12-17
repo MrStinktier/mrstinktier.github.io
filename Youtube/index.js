@@ -23,7 +23,7 @@ async function downloadMp3(query) {
   		a.setAttribute('download', '');
 		a.click();
 	} else if(res.status == 400) {
-		alert("Invalid url");
+		alert('Invalid url');
 	}
 }
 
