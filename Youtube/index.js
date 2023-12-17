@@ -1,9 +1,3 @@
-import * as cors from "cors";
-import * as express from "express";
-import * as ytdl from "ytdl-core";
-
-const app = express();
-
 let convertBtn = document.getElementById('submitButtonid');
 let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
@@ -38,7 +32,7 @@ async function downloadMp4(query) {
 	if(res.status == 200) {
 		var a = document.createElement('a');
   		a.href = `${serverURL}/downloadmp4?url=${query}`;
-  		a.setAttribute('download', '');
+  		a.setAttribute('link', '');
 		a.click();
 	} else if(res.status == 400) {
 		alert('Invalid url');
