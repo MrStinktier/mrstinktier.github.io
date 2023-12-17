@@ -52,11 +52,13 @@ app.get('/downloadmp4', async (req, res, next) => {
 		}, (err, info) => {
 			title = info.player_response.videoDetails.title.replace(/[^\x00-\x7F]/g, "");
 		});
-
+		
 		res.header('Content-Disposition', `attachment; filename="${title}.mp4"`);
 		ytdl(url, {
 			format: 'mp4',
-			filter: "highestvideo"
+			filter: function (format) {
+				return format.quality== "1080p";
+			}
 		}).pipe(res);
 
 	} catch (err) {
