@@ -5,8 +5,6 @@ let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev
 const times = "10";
 const delay = "10"
 
-window.addEventListener('online', chk)
-
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
 		alert('Enter YouTube URL');
