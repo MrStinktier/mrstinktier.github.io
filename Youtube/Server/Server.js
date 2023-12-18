@@ -11,6 +11,14 @@ app.listen(PORT, () => {
 	console.log(`Server Works !!! At port ${PORT}`);
 });
 
+app.get('/test', async (req, res, next) => {
+	try{
+		return res.sendStatus(200);
+	}catch{
+		return res.sendStatus(401);
+	}
+})
+
 app.get('/downloadmp3', async (req, res, next) => {
 	try {
 		var url = req.query.url;
