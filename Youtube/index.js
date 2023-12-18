@@ -2,8 +2,6 @@ let convertBtn = document.getElementById('submitButtonid');
 let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
 let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev';
-const times = "10";
-const delay = "10"
 
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
