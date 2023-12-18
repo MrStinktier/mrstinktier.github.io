@@ -11,7 +11,7 @@ app.listen(PORT, () => {
 	console.log(`Server Works !!! At port ${PORT}`);
 });
 
-app.get('/test', async (req, res, next) => {
+app.get('/test', async (res, next) => {
 	try{
 		return res.sendStatus(200);
 	}catch{
