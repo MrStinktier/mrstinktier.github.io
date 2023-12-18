@@ -12,11 +12,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/test', async (req, res, next) => {
-	try{
-		return res.sendStatus(200);
-	}catch{
-		return res.sendStatus(401);
-	}
+	return res.sendStatus(200);
 })
 
 app.get('/downloadmp3', async (req, res, next) => {
