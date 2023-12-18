@@ -49,7 +49,7 @@ async function downloadMp4(query) {
 
 const checkOnlineStatus = async () => {
 	try {
-	  const online = await fetch("https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev");
+	  const online = await fetch("https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev/test");
 	  return online.status >= 200 && online.status < 300; // either true or false
 	} catch (err) {
 	  return false; // definitely offline
