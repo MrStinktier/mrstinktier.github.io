@@ -50,7 +50,7 @@ async function downloadMp4(query) {
 const checkOnlineStatus = async () => {
 	try {
 	  const online = await fetch("https://www.google.com");
-	  return online.status >= 200 && online.status < 405; // either true or false
+	  return online.status >= 200 && online.status < 300; // either true or false
 	} catch (err) {
 	  return false; // definitely offline
 	}
