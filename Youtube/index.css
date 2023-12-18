@@ -137,6 +137,6 @@ input[type=text]{
     cursor: pointer;
 }
 
-.helptext{
+.helptext, .status{
     font-size: 20px;
 }
