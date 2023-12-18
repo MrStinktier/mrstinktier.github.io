@@ -140,3 +140,7 @@ input[type=text]{
 .helptext, .status{
     font-size: 20px;
 }
+
+.status{
+    margin-top: 20px;
+}
