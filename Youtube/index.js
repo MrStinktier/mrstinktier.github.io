@@ -50,7 +50,7 @@ async function downloadMp4(query) {
 const checkOnlineStatus = async () => {
 	try {
 	  const online = await fetch("https://www.google.com");
-	  return online.status >= 200 && online.status < 300; // either true or false
+	  return online.status >= 200 && online.status < 405; // either true or false
 	} catch (err) {
 	  return false; // definitely offline
 	}
@@ -59,5 +59,5 @@ const checkOnlineStatus = async () => {
 setInterval(async () => {
 	const result = await checkOnlineStatus();
 	const statusDisplay = document.getElementById("status");
-	statusDisplay.textContent = result ? "Online" : "OFFline";
+	statusDisplay.textContent = result ? "Online" : "Offline";
 }, 3000); // probably too often, try 30000 for every 30 seconds
