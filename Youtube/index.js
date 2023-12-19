@@ -50,7 +50,7 @@ async function downloadMp4(query) {
 	//	alert('Invalid url');
 	//}
 }
-
+/*
 async function checkServer() {
 	const res = await fetch(`https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev/test`);
 	if(res.status == 200) {
@@ -67,8 +67,8 @@ async function checkServer() {
 while(true){
 	checkServer();
 }
-
-/*const checkOnlineStatus = async () => {
+*/
+const checkOnlineStatus = async () => {
 	try {
 	  const online = await fetch("https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev/test");
 	  return online.status >= 200 && online.status < 300; // either true or false
@@ -81,5 +81,4 @@ setInterval(async () => {
 	const result = await checkOnlineStatus();
 	const statusDisplay = document.getElementById("status");
 	statusDisplay.textContent = result ? "The Server is Online" : "The Server is Offline";
-}, 30000); // probably too often, try 30000 for every 30 seconds
-*/
+}, 5000); // probably too often, try 30000 for every 30 seconds
