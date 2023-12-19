@@ -3,6 +3,8 @@ let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
 let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev';
 
+checkServer();
+
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
 		alert('Enter YouTube URL');
@@ -47,7 +49,19 @@ async function downloadMp4(query) {
 	//}
 }
 
-const checkOnlineStatus = async () => {
+async function checkServer() {
+	const res = await fetch(`https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev/test`);
+	if(res.status == 200) {
+		const statusDisplay = document.getElementById("status");
+		statusDisplay.textContent = "The Server is Online";
+	} else if(res.status == 404) {
+		const statusDisplay = document.getElementById("status");
+		statusDisplay.textContent = "The Server is Offline";
+		console.clear()
+	}
+}
+
+/*const checkOnlineStatus = async () => {
 	try {
 	  const online = await fetch("https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev/test");
 	  return online.status >= 200 && online.status < 300; // either true or false
@@ -60,4 +74,4 @@ setInterval(async () => {
 	const result = await checkOnlineStatus();
 	const statusDisplay = document.getElementById("status");
 	statusDisplay.textContent = result ? "The Server is Online" : "The Server is Offline";
-}, 30000); // probably too often, try 30000 for every 30 seconds
+}, 30000); // probably too often, try 30000 for every 30 seconds*/
