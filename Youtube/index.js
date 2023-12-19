@@ -65,7 +65,7 @@ async function checkServer() {
 }
 
 while(true){
-	await checkServer();
+	checkServer();
 }
 
 /*const checkOnlineStatus = async () => {
