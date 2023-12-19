@@ -74,4 +74,5 @@ setInterval(async () => {
 	const result = await checkOnlineStatus();
 	const statusDisplay = document.getElementById("status");
 	statusDisplay.textContent = result ? "The Server is Online" : "The Server is Offline";
-}, 30000); // probably too often, try 30000 for every 30 seconds*/
+}, 30000); // probably too often, try 30000 for every 30 seconds
+*/
