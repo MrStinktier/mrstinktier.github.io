@@ -3,7 +3,9 @@ let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
 let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev';
 
-checkServer();
+function Sleep(milliseconds) {
+	return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
 
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
@@ -54,11 +56,16 @@ async function checkServer() {
 	if(res.status == 200) {
 		const statusDisplay = document.getElementById("status");
 		statusDisplay.textContent = "The Server is Online";
+		await Sleep(5000)
 	} else if(res.status == 404) {
 		const statusDisplay = document.getElementById("status");
 		statusDisplay.textContent = "The Server is Offline";
 		console.clear()
 	}
+}
+
+while(true){
+	await checkServer();
 }
 
 /*const checkOnlineStatus = async () => {
