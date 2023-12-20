@@ -39,6 +39,7 @@ body{
     position: absolute;
     display: flex;
     flex-direction: column;
+    font-size: 30px;
 }
 
 .Youtube-URL-Pack{
@@ -143,5 +144,5 @@ input[type=text]{
 
 .status{
     position: absolute;
-    margin-top: 60px;
+    margin-top: 70px;
 }
