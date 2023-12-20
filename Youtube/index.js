@@ -82,4 +82,4 @@ async function timer(){
 	console.clear()
 }
 
-setInterval(timer(), 5000); // probably too often, try 30000 for every 30 seconds
+setInterval(await timer(), 5000); // probably too often, try 30000 for every 30 seconds
