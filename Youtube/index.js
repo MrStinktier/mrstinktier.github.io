@@ -3,7 +3,7 @@ let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
 let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev';
 
-timer()
+await timer()
 
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
@@ -82,4 +82,4 @@ async function timer(){
 	console.clear()
 }
 
-setInterval(await timer(), 5000); // probably too often, try 30000 for every 30 seconds
+setInterval(async () => {await timer()}, 5000); // probably too often, try 30000 for every 30 seconds
