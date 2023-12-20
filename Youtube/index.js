@@ -3,6 +3,8 @@ let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
 let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev';
 
+timer()
+
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
 		alert('Enter YouTube URL');
@@ -73,9 +75,11 @@ const checkOnlineStatus = async () => {
 	}
 };
 
-setInterval(async () => {
+async function timer(){
 	const result = await checkOnlineStatus();
 	const statusDisplay = document.getElementById("status");
 	statusDisplay.textContent = result ? "The Server is Online" : "The Server is Offline";
 	console.clear()
-}, 5000); // probably too often, try 30000 for every 30 seconds
+}
+
+setInterval(timer(), 5000); // probably too often, try 30000 for every 30 seconds
