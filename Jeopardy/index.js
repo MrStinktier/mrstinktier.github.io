@@ -33,3 +33,13 @@ let name5_200_link = document.getElementsByClassName(".name5-200-link");
 let name5_300_link = document.getElementsByClassName(".name5-300-link");
 let name5_400_link = document.getElementsByClassName(".name5-400-link");
 let name5_500_link = document.getElementsByClassName(".name5-500-link");
+
+name1_100_link.addEventListener('click', () => {
+    try{
+		var a = document.createElement('a');
+  		a.href = `https://www.google.com`;
+		a.click();
+	}catch{
+		alert("Try Again")
+	}
+});
