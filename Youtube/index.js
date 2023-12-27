@@ -3,7 +3,7 @@ let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
 let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev';
 
-await timer()
+timer()
 
 convertBtn.addEventListener('click', () => {
 	if (!URLinput.value) {
