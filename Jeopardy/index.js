@@ -41,3 +41,11 @@ name1_100_link.addEventListener('click', () => {
 		alert("Try Again")
 	}
 });
+
+name1_200_link.addEventListener('click', () => {
+    try{
+		alert("It works!!!")
+	}catch{
+		alert("Try Again")
+	}
+});
