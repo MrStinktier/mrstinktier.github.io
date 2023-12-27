@@ -36,9 +36,7 @@ let name5_500_link = document.getElementById("5,5");
 
 name1_100_link.addEventListener('click', () => {
     try{
-		var a = document.createElement('a');
-  		a.href = `https://www.google.com`;
-		a.click();
+		alert("It works!!!")
 	}catch{
 		alert("Try Again")
 	}
