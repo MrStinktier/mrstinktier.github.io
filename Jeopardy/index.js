@@ -4,7 +4,7 @@ let name3_link = document.getElementsByClassName(".name3-link");
 let name4_link = document.getElementsByClassName(".name4-link");
 let name5_link = document.getElementsByClassName(".name5-link");
 
-let name1_100_link = document.getElementsByClassName(".name1-100-link");
+let name1_100_link = document.getElementById("1,1");
 let name1_200_link = document.getElementsByClassName(".name1-200-link");
 let name1_300_link = document.getElementsByClassName(".name1-300-link");
 let name1_400_link = document.getElementsByClassName(".name1-400-link");
