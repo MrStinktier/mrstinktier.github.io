@@ -26,55 +26,86 @@ body{
         justify-content: center;
     }
 
-    .Type-header{
+    .headline-header{
         display: flex;
         justify-content: center;
     }
 
-    .Type{
+    .headline{
         position: absolute;
-        margin-top: 25px;
+        margin-top: 50px;
     }
 
-    .buttons1, .buttons2{
-        display: flex;
-        justify-content: center;
-    }
-
-    .buttons1{
+    .names{
         margin-top: 100px;
+        margin-left: 15px;
     }
 
-    .buttons2{
-        margin-top: 210px;
+    .name2-link, .name2-100-link, .name2-200-link, .name2-300-link, .name2-400-link, .name2-500-link{
+        margin-left: 140px;
     }
 
-    .button1, .button2, .button3, .button4{
+    .name3-link, .name3-100-link, .name3-200-link, .name3-300-link, .name3-400-link, .name3-500-link{
+        margin-left: 280px;
+    }
+
+    .name4-link, .name4-100-link, .name4-200-link, .name4-300-link, .name4-400-link, .name4-500-link{
+        margin-left: 420px;
+    }
+
+    .name5-link, .name5-100-link, .name5-200-link, .name5-300-link, .name5-400-link, .name5-500-link{
+        margin-left: 560px;
+    }
+
+
+
+    .name1-100-link:hover, .name2-100-link:hover, .name3-100-link:hover, .name4-100-link:hover, .name5-100-link:hover, .name1-200-link:hover, .name2-200-link:hover, .name3-200-link:hover, .name4-200-link:hover, .name5-200-link:hover, .name1-300-link:hover, .name2-300-link:hover, .name3-300-link:hover, .name4-300-link:hover, .name5-300-link:hover, .name1-400-link:hover, .name2-400-link:hover, .name3-400-link:hover, .name4-400-link:hover, .name5-400-link:hover, .name1-500-link:hover, .name2-500-link:hover, .name3-500-link:hover, .name4-500-link:hover, .name5-500-link:hover{
+        transform: scale(1.1);
+    }
+
+    .name1-link, .name2-link, .name3-link, .name4-link, .name5-link, .name1-100-link, .name2-100-link, .name3-100-link, .name4-100-link, .name5-100-link, .name1-200-link, .name2-200-link, .name3-200-link, .name4-200-link, .name5-200-link, .name1-300-link, .name2-300-link, .name3-300-link, .name4-300-link, .name5-300-link, .name1-400-link, .name2-400-link, .name3-400-link, .name4-400-link, .name5-400-link, .name1-500-link, .name2-500-link, .name3-500-link, .name4-500-link, .name5-500-link{
         position: absolute;
         box-shadow: 0 5px 15px rgba(0, 0, 0.35);
-        height: 200px;
-        width: 330px;
-        background-color: #b41f1f;
-        border-radius: 25px;
+        width: 130px;
+        height: 65px;
         display: flex;
-        text-decoration:none;
-        color: #fff;
         align-items: center;
         justify-content: center;
+        background-color: #b41f1f;
+        text-decoration:none;
+        border-radius: 25px;
     }
 
-    .button1:hover, .button2:hover, .button3:hover, .button4:hover{
-        transform: scale(1.05);
+    .name1-100-link:visited, .name2-100-link:visited, .name3-100-link:visited, .name4-100-link:visited, .name5-100-link:visited, .name1-200-link:visited, .name2-200-link:visited, .name3-200-link:visited, .name4-200-link:visited, .name5-200-link:visited, .name1-300-link:visited, .name2-300-link:visited, .name3-300-link:visited, .name4-300-link:visited, .name5-300-link:visited, .name1-400-link:visited, .name2-400-link:visited, .name3-400-link:visited, .name4-400-link:visited, .name5-400-link:visited, .name1-500-link:visited, .name2-500-link:visited, .name3-500-link:visited, .name4-500-link:visited, .name5-500-link:visited{
+        color: aqua;
     }
 
-    .button1, .button3{
-        margin-right: 350px;
+    .einhundert{
+        margin-top: 170px;
+        margin-left: 15px;
     }
 
-    .button2, .button4{
-        margin-left: 350px;
+    .zweihundert{
+        margin-top: 240px;
+        margin-left: 15px;
+    }
+
+    .dreihundert{
+        margin-top: 310px;
+        margin-left: 15px;
+    }
+
+    .vierhundert{
+        margin-top: 380px;
+        margin-left: 15px;
+    }
+
+    .fuenfhundert{
+        margin-top: 450px;
+        margin-left: 15px;
     }
 }
+
 
 @media (pointer: coarse) {
     .container{
@@ -86,5 +117,78 @@ body{
         box-shadow: 0 5px 15px rgba(0, 0, 0.35);
         align-items: center;
         justify-content: center;
+    }
+
+    .headline-header{
+        display: flex;
+        justify-content: center;
+    }
+
+    .headline{
+        position: absolute;
+        margin-top: 50px;
+    }
+
+    .names{
+        margin-top: 100px;
+        margin-left: 5px;
+    }
+
+    .name1-link, .name2-link, .name3-link, .name4-link, .name5-link, .name1-100-link, .name2-100-link, .name3-100-link, .name4-100-link, .name5-100-link, .name1-200-link, .name2-200-link, .name3-200-link, .name4-200-link, .name5-200-link, .name1-300-link, .name2-300-link, .name3-300-link, .name4-300-link, .name5-300-link, .name1-400-link, .name2-400-link, .name3-400-link, .name4-400-link, .name5-400-link, .name1-500-link, .name2-500-link, .name3-500-link, .name4-500-link, .name5-500-link{
+        position: absolute;
+        box-shadow: 0 5px 15px rgba(0, 0, 0.35);
+        width: 60px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #b41f1f;
+        text-decoration:none;
+        border-radius: 25px;
+    }
+
+    .name1-100-link:hover, .name2-100-link:hover, .name3-100-link:hover, .name4-100-link:hover, .name5-100-link:hover, .name1-200-link:hover, .name2-200-link:hover, .name3-200-link:hover, .name4-200-link:hover, .name5-200-link:hover, .name1-300-link:hover, .name2-300-link:hover, .name3-300-link:hover, .name4-300-link:hover, .name5-300-link:hover, .name1-400-link:hover, .name2-400-link:hover, .name3-400-link:hover, .name4-400-link:hover, .name5-400-link:hover, .name1-500-link:hover, .name2-500-link:hover, .name3-500-link:hover, .name4-500-link:hover, .name5-500-link:hover{
+        transform: scale(1.1);
+    }
+
+    .name2-link, .name2-100-link, .name2-200-link, .name2-300-link, .name2-400-link, .name2-500-link{
+        margin-left: 70px;
+    }
+
+    .name3-link, .name3-100-link, .name3-200-link, .name3-300-link, .name3-400-link, .name3-500-link{
+        margin-left: 140px;
+    }
+
+    .name4-link, .name4-100-link, .name4-200-link, .name4-300-link, .name4-400-link, .name4-500-link{
+        margin-left: 210px;
+    }
+
+    .name5-link, .name5-100-link, .name5-200-link, .name5-300-link, .name5-400-link, .name5-500-link{
+        margin-left: 280px;
+    }
+
+    .einhundert{
+        margin-top: 150px;
+        margin-left: 5px;
+    }
+
+    .zweihundert{
+        margin-top: 200px;
+        margin-left: 5px;
+    }
+
+    .dreihundert{
+        margin-top: 250px;
+        margin-left: 5px;
+    }
+
+    .vierhundert{
+        margin-top: 300px;
+        margin-left: 5px;
+    }
+
+    .fuenfhundert{
+        margin-top: 350px;
+        margin-left: 5px;
     }
 }
