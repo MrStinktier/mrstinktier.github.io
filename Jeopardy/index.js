@@ -4,8 +4,6 @@ let name3_link = document.getElementById("0,3");
 let name4_link = document.getElementById("0,4");
 let name5_link = document.getElementById("0,5");
 
-let buttons = document.getElementsByClassName("buttons")
-
 let name1_100_link = document.getElementById("1,1");
 let name2_100_link = document.getElementById("1,2");
 let name3_100_link = document.getElementById("1,3");
@@ -36,7 +34,6 @@ let name3_500_link = document.getElementById("5,3");
 let name4_500_link = document.getElementById("5,4");
 let name5_500_link = document.getElementById("5,5");
 
-/*
 name1_100_link.addEventListener('click', () => {
 	
 });
@@ -119,8 +116,4 @@ name5_400_link.addEventListener('click', () => {
 
 name1_400_link.addEventListener('click', () => {
 	
-});
-*/
-buttons.addEventListener('click', () => {
-	alert("lel")
 });
