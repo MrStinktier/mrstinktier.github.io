@@ -34,12 +34,10 @@ let name3_500_link = document.getElementById("5,3");
 let name4_500_link = document.getElementById("5,4");
 let name5_500_link = document.getElementById("5,5");
 
-var randomArray = ['Promis', 'Geschichte', 'Arbeit'];
+browserload()
 
-browserload(randomArray)
-
-function browserload(randomArray){
-    name1_link.textContent = ["lol", "lel", "kekl", "Lmao", "roffl"];
+function browserload(){
+    name1_link.textContent = "eins";
 }
 
 name1_100_link.addEventListener('click', () => {
