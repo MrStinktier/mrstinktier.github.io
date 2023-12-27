@@ -34,10 +34,12 @@ let name3_500_link = document.getElementById("5,3");
 let name4_500_link = document.getElementById("5,4");
 let name5_500_link = document.getElementById("5,5");
 
-browserload()
+var randomArray = ['Promis', 'Geschichte', 'Arbeit'];
 
-function browserload(){
-    name1_link.textContent = "209593ß204"
+browserload(randomArray)
+
+function browserload(randomArray){
+    name1_link.textContent = randomArray[_.random(randomArray.length-1)];
 }
 
 name1_100_link.addEventListener('click', () => {
