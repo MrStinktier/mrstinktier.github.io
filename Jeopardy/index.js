@@ -39,7 +39,7 @@ var randomArray = ['Promis', 'Geschichte', 'Arbeit'];
 browserload(randomArray)
 
 function browserload(randomArray){
-    name1_link.textContent = randomArray[_.random(randomArray.length-1)];
+    name1_link.textContent = ["lol", "lel", "kekl", "Lmao", "roffl"];
 }
 
 name1_100_link.addEventListener('click', () => {
