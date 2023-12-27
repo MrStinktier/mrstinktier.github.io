@@ -34,11 +34,11 @@ let name3_500_link = document.getElementById("5,3");
 let name4_500_link = document.getElementById("5,4");
 let name5_500_link = document.getElementById("5,5");
 
-await browserload()
-
 async function browserload(){
     name1_link.textContent = "209593ß204"
 }
+
+await browserload()
 
 name1_100_link.addEventListener('click', () => {
 	
