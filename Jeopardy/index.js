@@ -33,6 +33,7 @@ let name2_500_link = document.getElementById("5,2");
 let name3_500_link = document.getElementById("5,3");
 let name4_500_link = document.getElementById("5,4");
 let name5_500_link = document.getElementById("5,5");
+
 /*
 browserload()
 
@@ -40,8 +41,19 @@ function browserload(){
     name1_link.textContent = "eins";
 }
 */
+
 name1_100_link.addEventListener('click', () => {
-	location.href("https://www.google.com")
+	fetch("./buttons.txt")
+    .then(function (res) {
+        return res.text();
+    })
+    .then(function (data) {
+        console.log(data);
+		data.split("\n");
+		for (let i=0; i<data.length; i++){
+			console.log(data[i]);
+		}
+    });
 });
 
 name2_100_link.addEventListener('click', () => {
