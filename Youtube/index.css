@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+*:hover{
+    cursor: default;
+}
+
 body{
     background-color: #37474f;
     height: 100vh;
@@ -24,9 +28,9 @@ body{
 }
 
 .header{
-    margin-top: 40px;
-    margin-left: 190px;
-    width: 320px;
+    padding-top: 40px;
+    margin: auto;
+    max-width: 320px;
     height: 15px;
     display: flex;
     align-items: center;
@@ -43,14 +47,13 @@ body{
 }
 
 .Youtube-URL-Pack{
-    margin-top: 60px;
-    margin-left: 300px;
-    width: 100px;
+    padding-top: 60px;
+    margin: auto;
+    max-width: 100px;
     height: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .Youtube-URL{
