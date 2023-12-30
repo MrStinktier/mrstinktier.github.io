@@ -33,13 +33,13 @@ let name2_500_link = document.getElementById("5,2");
 let name3_500_link = document.getElementById("5,3");
 let name4_500_link = document.getElementById("5,4");
 let name5_500_link = document.getElementById("5,5");
-
+/*
 browserload()
 
 function browserload(){
     name1_link.textContent = "eins";
 }
-
+*/
 name1_100_link.addEventListener('click', () => {
 	
 });
