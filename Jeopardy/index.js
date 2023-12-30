@@ -41,7 +41,7 @@ function browserload(){
 }
 */
 name1_100_link.addEventListener('click', () => {
-	
+	window.location.href("https://www.google.com")
 });
 
 name2_100_link.addEventListener('click', () => {
