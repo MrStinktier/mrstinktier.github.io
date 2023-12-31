@@ -50,20 +50,6 @@ async function disappear(){
             document.getElementById(prints[i]).style.visibility="hidden";
 		}
     });
-    fetch("./question.txt")
-    .then(function (res) {
-        return res.text();
-    })
-    .then(function (data) {
-		prints = data.split('\n');
-		for (let i=0; i<prints.length; i++){
-            document.getElementById(prints[i]).style.visibility="visible";
-            const node = document.createElement("button");
-            const buttonel = node.classList.add('button5');
-            document.getElementById("buttons1").appendChild(buttonel);
-
-		}
-    });
 }
 async function appear(){
     fetch("./jeopardy.txt")
@@ -74,16 +60,6 @@ async function appear(){
 		prints = data.split('\n');
 		for (let i=0; i<prints.length; i++){
             document.getElementById(prints[i]).style.visibility="visible";
-		}
-    });
-    fetch("./question.txt")
-    .then(function (res) {
-        return res.text();
-    })
-    .then(function (data) {
-		prints = data.split('\n');
-		for (let i=0; i<prints.length; i++){
-            document.getElementById(prints[i]).style.visibility="hidden";
 		}
     });
 }
@@ -192,20 +168,4 @@ name4_500_link.addEventListener('click', () => {
 
 name5_500_link.addEventListener('click', () => {
 	disappear()
-});
-
-answer1.addEventListener('click', () => {
-	appear()
-});
-
-answer2.addEventListener('click', () => {
-	appear()
-});
-
-answer3.addEventListener('click', () => {
-	appear()
-});
-
-answer4.addEventListener('click', () => {
-	appear()
 });
