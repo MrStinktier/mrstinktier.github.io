@@ -47,10 +47,17 @@ async function disappear(){
     .then(function (data) {
 		prints = data.split('\n');
 		for (let i=0; i<prints.length; i++){
-            document.getElementById(prints[i]).style.visibility="hidden";
+            document.getElementById(prints[i]).remove();
 		}
+        const container = document.getElementById("container")
+        const newButton = document.createElement('button');
+        newButton.textContent = 'Click me!';
+        newButton.id = '7,0';
+        newButton.type = 'button'
+        container.appendChild(newButton);
     });
 }
+/*
 async function appear(){
     fetch("./jeopardy.txt")
     .then(function (res) {
@@ -69,6 +76,10 @@ browserload()
 function browserload(){
     appear()
 }
+*/
+newButton.addEventListener('click', () => {
+    
+});
 
 name1_100_link.addEventListener('click', () => {
     disappear()
