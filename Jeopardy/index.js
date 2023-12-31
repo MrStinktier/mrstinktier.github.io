@@ -34,120 +34,178 @@ let name3_500_link = document.getElementById("5,3");
 let name4_500_link = document.getElementById("5,4");
 let name5_500_link = document.getElementById("5,5");
 
-/*
-browserload()
+let answer1 = document.getElementById("6,2");
+let answer2 = document.getElementById("6,3");
+let answer3 = document.getElementById("6,4");
+let answer4 = document.getElementById("6,5");
 
-function browserload(){
-    name1_link.textContent = "eins";
-}
-*/
-
-name1_100_link.addEventListener('click', () => {
-	fetch("./buttons.txt")
+async function disappear(){
+    fetch("./jeopardy.txt")
     .then(function (res) {
         return res.text();
     })
     .then(function (data) {
-        console.log(data);
-		data.split("\n");
-		for (let i=0; i<data.length; i++){
-			console.log(data[i]);
+		prints = data.split('\n');
+		for (let i=0; i<prints.length; i++){
+            document.getElementById(prints[i]).style.visibility="hidden";
 		}
     });
+    fetch("./question.txt")
+    .then(function (res) {
+        return res.text();
+    })
+    .then(function (data) {
+		prints = data.split('\n');
+		for (let i=0; i<prints.length; i++){
+            document.getElementById(prints[i]).style.visibility="visible";
+            const node = document.createElement("button");
+            const buttonel = node.classList.add('button5');
+            document.getElementById("buttons1").appendChild(buttonel);
+
+		}
+    });
+}
+async function appear(){
+    fetch("./jeopardy.txt")
+    .then(function (res) {
+        return res.text();
+    })
+    .then(function (data) {
+		prints = data.split('\n');
+		for (let i=0; i<prints.length; i++){
+            document.getElementById(prints[i]).style.visibility="visible";
+		}
+    });
+    fetch("./question.txt")
+    .then(function (res) {
+        return res.text();
+    })
+    .then(function (data) {
+		prints = data.split('\n');
+		for (let i=0; i<prints.length; i++){
+            document.getElementById(prints[i]).style.visibility="hidden";
+		}
+    });
+}
+
+browserload()
+
+function browserload(){
+    appear()
+}
+
+name1_100_link.addEventListener('click', () => {
+    disappear()
 });
 
 name2_100_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name3_100_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name4_100_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name5_100_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name1_200_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name2_200_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name3_200_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name4_200_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name5_200_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name1_300_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name2_300_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name3_300_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name4_300_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name5_300_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name1_400_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name2_400_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name3_400_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name4_400_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name5_400_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name1_500_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name2_500_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name3_500_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name4_500_link.addEventListener('click', () => {
-	
+	disappear()
 });
 
 name5_500_link.addEventListener('click', () => {
-	
+	disappear()
+});
+
+answer1.addEventListener('click', () => {
+	appear()
+});
+
+answer2.addEventListener('click', () => {
+	appear()
+});
+
+answer3.addEventListener('click', () => {
+	appear()
+});
+
+answer4.addEventListener('click', () => {
+	appear()
 });

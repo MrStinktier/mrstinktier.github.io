@@ -24,6 +24,7 @@ body{
         box-shadow: 0 5px 15px rgba(0, 0, 0.35);
         align-items: center;
         justify-content: center;
+        position: relative;
     }
 
     .headline-header{
@@ -33,7 +34,7 @@ body{
 
     .headline{
         position: absolute;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .names{
@@ -57,14 +58,12 @@ body{
         margin-left: 560px;
     }
 
-
-
     .name1-100-link:hover, .name2-100-link:hover, .name3-100-link:hover, .name4-100-link:hover, .name5-100-link:hover, .name1-200-link:hover, .name2-200-link:hover, .name3-200-link:hover, .name4-200-link:hover, .name5-200-link:hover, .name1-300-link:hover, .name2-300-link:hover, .name3-300-link:hover, .name4-300-link:hover, .name5-300-link:hover, .name1-400-link:hover, .name2-400-link:hover, .name3-400-link:hover, .name4-400-link:hover, .name5-400-link:hover, .name1-500-link:hover, .name2-500-link:hover, .name3-500-link:hover, .name4-500-link:hover, .name5-500-link:hover{
         transform: scale(1.1);
     }
 
     .name1-link, .name2-link, .name3-link, .name4-link, .name5-link, .name1-100-link, .name2-100-link, .name3-100-link, .name4-100-link, .name5-100-link, .name1-200-link, .name2-200-link, .name3-200-link, .name4-200-link, .name5-200-link, .name1-300-link, .name2-300-link, .name3-300-link, .name4-300-link, .name5-300-link, .name1-400-link, .name2-400-link, .name3-400-link, .name4-400-link, .name5-400-link, .name1-500-link, .name2-500-link, .name3-500-link, .name4-500-link, .name5-500-link{
-        position: absolute;
+        position:absolute;
         box-shadow: 0 5px 15px rgba(0, 0, 0.35);
         width: 130px;
         height: 65px;
@@ -74,10 +73,7 @@ body{
         background-color: #b41f1f;
         text-decoration:none;
         border-radius: 25px;
-    }
-
-    .name1-100-link:visited, .name2-100-link:visited, .name3-100-link:visited, .name4-100-link:visited, .name5-100-link:visited, .name1-200-link:visited, .name2-200-link:visited, .name3-200-link:visited, .name4-200-link:visited, .name5-200-link:visited, .name1-300-link:visited, .name2-300-link:visited, .name3-300-link:visited, .name4-300-link:visited, .name5-300-link:visited, .name1-400-link:visited, .name2-400-link:visited, .name3-400-link:visited, .name4-400-link:visited, .name5-400-link:visited, .name1-500-link:visited, .name2-500-link:visited, .name3-500-link:visited, .name4-500-link:visited, .name5-500-link:visited{
-        color: aqua;
+        margin-bottom: 1000px;
     }
 
     .einhundert{
