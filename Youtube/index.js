@@ -1,7 +1,7 @@
 let convertBtn = document.getElementById('submitButtonid');
 let URLinput = document.querySelector('.youtube-url');
 let select = document.querySelector('.File');
-let serverURL = 'https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev';
+let serverURL = 'https://backend.mr-stinktier.uk';
 
 timer()
 
@@ -68,7 +68,7 @@ while(true){
 */
 const checkOnlineStatus = async () => {
 	try {
-	  const online = await fetch("https://fuzzy-space-disco-979xp7rwxxrv277xg-4000.app.github.dev/test");
+	  const online = await fetch(`${serverURL}/test`);
 	  return online.status >= 200 && online.status < 300; // either true or false
 	} catch (err) {
 	  return false; // definitely offline

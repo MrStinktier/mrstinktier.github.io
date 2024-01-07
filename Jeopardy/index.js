@@ -38,6 +38,8 @@ let answer1 = document.getElementById("6,2");
 let answer2 = document.getElementById("6,3");
 let answer3 = document.getElementById("6,4");
 let answer4 = document.getElementById("6,5");
+/*
+let newButton = document.getElementById("7,0");
 
 async function disappear(){
     fetch("./jeopardy.txt")
@@ -49,15 +51,19 @@ async function disappear(){
 		for (let i=0; i<prints.length; i++){
             document.getElementById(prints[i]).remove();
 		}
-        const container = document.getElementById("container")
+        const container = document.getElementById("container");
         const newButton = document.createElement('button');
         newButton.textContent = 'Click me!';
         newButton.id = '7,0';
-        newButton.type = 'button'
+        newButton.type = 'button';
+        newButton.classList.add("buttonos")
         container.appendChild(newButton);
+        newButton.addEventListener('click', () => {
+            appear();
+        });
     });
 }
-/*
+
 async function appear(){
     fetch("./jeopardy.txt")
     .then(function (res) {
@@ -77,9 +83,7 @@ function browserload(){
     appear()
 }
 */
-newButton.addEventListener('click', () => {
-    
-});
+
 
 name1_100_link.addEventListener('click', () => {
     disappear()
