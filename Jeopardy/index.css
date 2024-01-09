@@ -8,9 +8,9 @@
 body{
     background-color: #37474f;
     height: 100vh;
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: grid;
 }
 
 @media (pointer: fine), (pointer: none) or (pointer: fine) and (any-pointer: coarse) {
@@ -25,20 +25,21 @@ body{
         align-items: center;
         justify-content: center;
         position: relative;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 8fr;
     }
 
     .headline-header{
-        display: flex;
-        justify-content: center;
-    }
-
-    .headline{
-        position: absolute;
-        margin-top: 30px;
+        grid-area: 1 / 1;
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%;
     }
 
     .names{
-        margin-top: 100px;
+        grid-area: 2 / 1;
         margin-left: 15px;
     }
 
@@ -67,38 +68,85 @@ body{
         box-shadow: 0 5px 15px rgba(0, 0, 0.35);
         width: 130px;
         height: 65px;
-        display: flex;
+        display:flex;
         align-items: center;
         justify-content: center;
         background-color: #b41f1f;
         text-decoration:none;
         border-radius: 25px;
-        margin-bottom: 1000px;
     }
 
     .einhundert{
-        margin-top: 170px;
+        grid-area: 3 / 1;
+        margin-top: 70px;
         margin-left: 15px;
     }
 
     .zweihundert{
-        margin-top: 240px;
+        grid-area: 4 / 1;
+        margin-top: 70px;
         margin-left: 15px;
     }
 
     .dreihundert{
-        margin-top: 310px;
+        grid-area: 5 / 1;
+        margin-top: 70px;
         margin-left: 15px;
     }
 
     .vierhundert{
-        margin-top: 380px;
+        grid-area: 6 / 1;
+        margin-top: 70px;
         margin-left: 15px;
     }
 
     .fuenfhundert{
-        margin-top: 450px;
+        grid-area: 7 / 1;
+        margin-top: 70px;
         margin-left: 15px;
+    }
+
+    .buttueno{
+        margin-bottom: 70px;
+        visibility: hidden;
+    }
+
+    .Type-header{
+        grid-area: 1 / 1;
+        visibility: hidden;
+        justify-self: center;
+        width: auto;
+        max-width: 80%;
+    }
+
+    .button1, .button2, .button3, .button4{
+        background-color: #b41f1f;
+        width: 44%;
+        height: 280%;
+        border-radius: 25px;
+        z-index: 4;
+        visibility: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0.35);
+    }
+
+    .button1, .button2{
+        grid-area: 4 / 1;
+    }
+
+    .button3, .button4{
+        grid-area: 7 / 1;
+    }
+
+    .button1, .button3{
+        margin-left: 4.5%;
+    }
+
+    .button2, .button4{
+        margin-left: 51.5%;
+    }
+
+    .button1:hover, .button2:hover, .button3:hover, .button4:hover{
+        transform: scale(1.1);
     }
 }
 
