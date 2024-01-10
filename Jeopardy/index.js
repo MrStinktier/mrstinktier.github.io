@@ -38,7 +38,7 @@ let answer1 = document.getElementById("6,2");
 let answer2 = document.getElementById("6,3");
 let answer3 = document.getElementById("6,4");
 let answer4 = document.getElementById("6,5");
-/*
+
 let newButton = document.getElementById("7,0");
 
 async function disappear(){
@@ -49,18 +49,12 @@ async function disappear(){
     .then(function (data) {
 		prints = data.split('\n');
 		for (let i=0; i<prints.length; i++){
-            document.getElementById(prints[i]).remove();
+			if (i<=30){
+            	document.getElementById(prints[i]).style.visibility="hidden";
+			}else if (i>30){
+				document.getElementById(prints[i]).style.visibility="visible";
+			}
 		}
-        const container = document.getElementById("container");
-        const newButton = document.createElement('button');
-        newButton.textContent = 'Click me!';
-        newButton.id = '7,0';
-        newButton.type = 'button';
-        newButton.classList.add("buttonos")
-        container.appendChild(newButton);
-        newButton.addEventListener('click', () => {
-            appear();
-        });
     });
 }
 
@@ -72,18 +66,14 @@ async function appear(){
     .then(function (data) {
 		prints = data.split('\n');
 		for (let i=0; i<prints.length; i++){
-            document.getElementById(prints[i]).style.visibility="visible";
+			if (i<=30){
+            	document.getElementById(prints[i]).style.visibility="visible";
+			}else if (i>30){
+				document.getElementById(prints[i]).style.visibility="hidden";
+			}
 		}
     });
 }
-
-browserload()
-
-function browserload(){
-    appear()
-}
-*/
-
 
 name1_100_link.addEventListener('click', () => {
     disappear()
@@ -183,4 +173,20 @@ name4_500_link.addEventListener('click', () => {
 
 name5_500_link.addEventListener('click', () => {
 	disappear()
+});
+
+answer1.addEventListener('click', () => {
+	appear()
+});
+
+answer2.addEventListener('click', () => {
+	appear()
+});
+
+answer3.addEventListener('click', () => {
+	appear()
+});
+
+answer4.addEventListener('click', () => {
+	appear()
 });
