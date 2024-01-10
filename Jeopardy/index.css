@@ -64,15 +64,15 @@ body{
     }
 
     .name1-link, .name2-link, .name3-link, .name4-link, .name5-link, .name1-100-link, .name2-100-link, .name3-100-link, .name4-100-link, .name5-100-link, .name1-200-link, .name2-200-link, .name3-200-link, .name4-200-link, .name5-200-link, .name1-300-link, .name2-300-link, .name3-300-link, .name4-300-link, .name5-300-link, .name1-400-link, .name2-400-link, .name3-400-link, .name4-400-link, .name5-400-link, .name1-500-link, .name2-500-link, .name3-500-link, .name4-500-link, .name5-500-link{
-        position:absolute;
+        position: absolute;
         box-shadow: 0 5px 15px rgba(0, 0, 0.35);
         width: 130px;
         height: 65px;
-        display:flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         background-color: #b41f1f;
-        text-decoration:none;
+        text-decoration: none;
         border-radius: 25px;
     }
 
