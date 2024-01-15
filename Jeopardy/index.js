@@ -4,7 +4,11 @@ async function disappear(){
         return res.text();
     })
     .then(function (data) {
-		prints = data.split('\n');
+		try{
+			prints = data.split('\n');
+		}catch{
+			prints = data.split('\r\n');
+		}
 		for (let i=0; i<prints.length; i++){
 			if (i<31){
             	document.getElementById(prints[i]).style.visibility="hidden";
@@ -21,7 +25,11 @@ async function appear(){
         return res.text();
     })
     .then(function (data) {
-		prints = data.split('\n');
+		try{
+			prints = data.split('\n');
+		}catch{
+			prints = data.split('\r\n');
+		}
 		for (let i=0; i<prints.length; i++){
 			if (i<=30){
             	document.getElementById(prints[i]).style.visibility="visible";
