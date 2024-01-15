@@ -4,7 +4,7 @@ async function disappear(){
         return res.text();
     })
     .then(function (data) {
-		prints = data.split('\r\n');
+		prints = data.split('\n');
 		for (let i=0; i<prints.length; i++){
 			if (i<31){
             	document.getElementById(prints[i]).style.visibility="hidden";
@@ -21,7 +21,7 @@ async function appear(){
         return res.text();
     })
     .then(function (data) {
-		prints = data.split('\r\n');
+		prints = data.split('\n');
 		for (let i=0; i<prints.length; i++){
 			if (i<=30){
             	document.getElementById(prints[i]).style.visibility="visible";
