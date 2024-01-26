@@ -11,4 +11,5 @@ async function wakeup() {
     }else if(res.status == 400) {
         console.log("Something went wrong");
     }
+    return "https://web.parsec.app"
 }
