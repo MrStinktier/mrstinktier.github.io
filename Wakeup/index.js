@@ -8,7 +8,7 @@ async function wakeup() {
     const res = await fetch(`https://backend.mr-stinktier.uk/Wakeup`);
 	if(res.status == 200) {
         console.log("Worked");
-        location.replace("https://web.parsec.app");
+        location.href("https://web.parsec.app");
     }else if(res.status == 400) {
         console.log("Something went wrong");
     }
