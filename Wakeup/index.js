@@ -5,7 +5,7 @@ button.addEventListener('click', () => {
 });
 
 async function wakeup() {
-    const res = await fetch(`https://backend.mr-stinktier.uk/Wakeup`);
+    const res = await fetch(`https://backend.mr-stinktier.uk/Wakeup`/*`https://backend.mr-stinktier.uk/Wakeup?url=${query}`*/);
 	if(res.status == 200) {
         console.log("Worked");
     }else if(res.status == 400) {
