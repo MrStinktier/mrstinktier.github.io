@@ -71,7 +71,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #fff/*#b41f1f*/;
+        background-color: #b41f1f;
         text-decoration: none;
         border-radius: 25px;
     }
