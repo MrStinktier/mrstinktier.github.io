@@ -5,7 +5,8 @@ button.addEventListener('click', () => {
 });
 
 async function wakeup() {
-    const res = await fetch(`https://backend.mr-stinktier.uk/Wakeup`);
+    var mac = "00:13:3b:0c:64:3f"
+    const res = await fetch(`https://backend.mr-stinktier.uk/start?mac=${mac}`);
 	if(res.status == 200) {
         console.log("Worked");
         location.replacer("https://web.parsec.app");
