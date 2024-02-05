@@ -1,15 +1,21 @@
-let button = document.getElementById("button")
+document.addEventListener("click", function(event) {
+	switch (event.target.id) {
+	  	case "button":
+			wakeup("00:13:3b:0c:64:3f");
+			break;
+	  	case "button2":
+			wakeup("192.168.115.154");
+			break;
+	  	default:
+			break;
+	}
+  });
 
-button.addEventListener('click', () => {
-    wakeup()
-});
-
-async function wakeup() {
-    var mac = "00:13:3b:0c:64:3f"
+async function wakeup(mac) {
     const res = await fetch(`https://backend.mr-stinktier.uk/start?mac=${mac}`);
+    console.log(mac);
 	if(res.status == 200) {
         console.log("Worked");
-        location.replacer("https://web.parsec.app");
     }else if(res.status == 400) {
         console.log("Something went wrong");
     }

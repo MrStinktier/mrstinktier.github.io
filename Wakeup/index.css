@@ -34,6 +34,7 @@ body{
 }
 
 .pc1-button{
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
     background-color: black;
     color: white;
     position: absolute;
@@ -42,6 +43,10 @@ body{
     height: 40%;
     width: 20%;
     border-radius: 25px;
+}
+
+.pc1-button:hover{
+    transform: scale(1.1);
 }
 
 .pc1-text-div{
