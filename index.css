@@ -39,10 +39,14 @@ body{
     height: 100px;
 }
 
-.link1-text, .link2-text{
+.link1-text, .link2-text, .link3-text{
     position: absolute;
 }
 
 .link2-text{
     margin-top: 20px;
+}
+
+.link3-text{
+    margin-top: 40px;
 }
