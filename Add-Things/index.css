@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -14,23 +15,23 @@ body{
 }
 
 .container{
-    display: flex;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     width: 80%;
     height: 90%;
     background-color: #232931;
     border-radius: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0.35);
-    align-items: center;
     justify-content: center;
     color: #fff;
 }
 
 .heading{
-    margin-bottom: 47.5%;
-    justify-self: center;
-    width: fit-content;
-    grid-row: 1;
-    grid-column: 1;
+    margin-top: 5%;
+}
+
+.Add-Button{
+    
+    height: 40px;
+    width: 90px;
+    border-radius: 25px;
+    margin-top: 4%;
 }
