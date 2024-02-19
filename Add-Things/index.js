@@ -18,6 +18,5 @@ popupButton.addEventListener("click", function(event){
 popupSubmit.addEventListener("click", function(event){
     event.preventDefault();
     popupWindow.style.display = "none";
-    adder.innerHTML += document.getElementById("popup-input").value;
+    adder.innerHTML += popupInputText.value;
 });
-//adder.innerHTML += "hello"
