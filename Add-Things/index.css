@@ -37,6 +37,7 @@ body{
 }
 
 .popup-div{
+    border-radius: 25px;
     position: fixed;
   width: 300px;
   height: 200px;
@@ -51,11 +52,21 @@ body{
   z-index: 10;
   display: none;
 }
-
+.popup-button{
+    border-radius: 25px;
+    width: 20%;
+}
 .popup-text{
     color: #232931;
+    margin-top: 20px;
+}
+
+.popup-input{
+    border-radius: 25px;
+    margin-top: 20px;
 }
 
 .popup-submit-button{
-    color: black;
+    border-radius: 25px;
+    width: 20%;
 }
