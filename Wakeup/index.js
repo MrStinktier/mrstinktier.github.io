@@ -4,7 +4,7 @@ document.addEventListener("click", function(event) {
 			wakeup("00:13:3b:0c:64:3f");
 			break;
 	  	case "button2":
-			wakeup("00:13:3b:0c:64:3d");
+			wakeup("a0:b3:cc:eb:0d:d3");
 			break;
 	  	default:
 			break;
