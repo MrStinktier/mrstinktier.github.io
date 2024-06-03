@@ -98,11 +98,11 @@ body{
 .sh-dropdown-contents{
     box-shadow: 0 5px 15px rgba(0, 0, 0.35);
     background-color:white;
-    color: white;
     position: absolute;
     margin-left: 47.5%;
     margin-right: 2.5%;
-    margin-top: 3%;
+    top: 22.5%;
+    bottom: 22.5%;
     height: 55%;
     width: 50%;
     min-height: 45px;
