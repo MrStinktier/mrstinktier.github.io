@@ -16,10 +16,11 @@ document.addEventListener("click", function(event) {
 		  	break;
 		case "shutdown-dropdown":
 			if(statdropdown=="disabled"){
-				this.getElementById("sh-dropdown-contents").style.display = "flex";
+				//document.getElementById('sh-dropdown-contents').className = 'clicked';
+				document.getElementById('sh-dropdown-contents').classList.add("clicked");
 				statdropdown = "enabled";
 			}else if(statdropdown=="enabled"){
-				this.getElementById("sh-dropdown-contents").style.display = "none";
+				document.getElementById('sh-dropdown-contents').classList.remove("clicked");
 				statdropdown = "disabled";
 			}
 			break;
@@ -27,6 +28,17 @@ document.addEventListener("click", function(event) {
 			break;
 	}
   });
+
+const callback = () => {
+	document.getElementById('sh-dropdown-contents').classList.add("clicked");
+};
+  
+  /* add event listener */
+  document.getElementById('shutdown-dropdown').addEventListener("click", callback);
+
+/*getElementById('shutdown-dropdown').on('click',function(){
+	getElementById('sh-dropdown-contents').classList.add('clicked');
+});*/
 
 async function wakeup(mac) {
     const res = await fetch(`https://backend.mr-stinktier.uk/start?mac=${mac}`);
