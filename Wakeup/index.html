@@ -10,14 +10,23 @@
 <body>
     <div class="container">
         <div class="pc1-button-div">
-            <button type="button" id="button" class="pc1-button">Wakeup</button>
+            <div type="button" id="button" class="pc1-button">
+                <button type="button" id="button" class="pc11-button">Wakeup</button>
+                <button type="button" id="shutdown-dropdown" class="shutdown-dropdown">X</button>
+            </div>
             <div class="pc1-text-div">
                 <h1 class="pc1-text-header">Desktop Pc</h1>
                 <div class="pc1-text-bottom">Mein PC wird hier gestartet.</div>
             </div>
+            <div class="sh-dropdown-contents" id="sh-dropdown-contents">
+                <button type="button" id="shutdown" class="shutdown">Shutdown PC</button>
+                <button type="button" id="reboot" class="reboot">Reboot PC</button>
+            </div>
         </div>
         <div class="pc2-button-div">
-            <button type="button" id="button2" class="pc1-button">Wakeup</button>
+            <div type="button" id="button" class="pc1-button">
+                <button type="button" id="button2" class="pc11-button">Wakeup</button>
+            </div>
             <div class="pc1-text-div">
                 <h1 class="pc1-text-header">TrueNAS</h1>
                 <div class="pc1-text-bottom">Meine NAS wird hier gestartet.</div>
