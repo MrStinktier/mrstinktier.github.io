@@ -149,3 +149,15 @@ body{
     position: absolute;
     z-index: 1;
 }
+
+.netstat2{
+    background-color: #8B0000;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-left: 3.55%;
+    margin-top: 1.5%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
+    position: absolute;
+    z-index: 1;
+}

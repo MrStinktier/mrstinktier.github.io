@@ -1,4 +1,7 @@
 var statdropdown = "disabled";
+var serverURL = "https://backend.mr-stinktier.uk"
+
+timer()
 
 document.addEventListener("click", function(event) {
 	switch (event.target.id) {
@@ -30,19 +33,8 @@ document.addEventListener("click", function(event) {
 	}
   });
 
-const callback = () => {
-	document.getElementById('sh-dropdown-contents').classList.add("clicked");
-};
-  
-  /* add event listener */
-  document.getElementById('shutdown-dropdown').addEventListener("click", callback);
-
-/*getElementById('shutdown-dropdown').on('click',function(){
-	getElementById('sh-dropdown-contents').classList.add('clicked');
-});*/
-
 async function wakeup(mac) {
-    const res = await fetch(`https://backend.mr-stinktier.uk/start?mac=${mac}`);
+    const res = await fetch(`${serverURL}/start?mac=${mac}`);
     console.log(mac);
 	if(res.status == 200) {
         console.log("Worked");
@@ -52,7 +44,7 @@ async function wakeup(mac) {
 }
 
 async function Shutdown(status) {
-    const res = await fetch(`https://backend.mr-stinktier.uk/shutdown?stat=${status}`);
+    const res = await fetch(`${serverURL}/shutdown?stat=${status}`);
     console.log(status);
 	if(res.status == 200) {
         console.log("Worked");
@@ -60,3 +52,44 @@ async function Shutdown(status) {
         console.log("Something went wrong");
     }
 }
+
+/*const checkOnlineStatus = async () => {
+	try {
+	  	const online = await fetch(`${serverURL}/testin`);
+	  	return online.status >= 200 && online.status < 300; // either true or false
+	} catch (err) {
+	  	return false; // definitely offline
+	}
+};*/
+
+async function checkOnlineStatus(IP){
+	try {
+		const online = await fetch(`${serverURL}/testin?stat=${IP}`);
+		return online.status >= 200 && online.status < 300; // either true or false
+  	} catch (err) {
+		return false; // definitely offline
+  	}
+}
+
+async function timer(){
+	const netstatdesktop = document.getElementById("netstat");
+	const netstattruenas = document.getElementById("netstat2");
+	const result1 = await checkOnlineStatus("192.168.115.66");
+	const result2 = await checkOnlineStatus("192.168.115.154");
+	console.log(result1);
+	console.log(result2);
+	if(result1==true){
+		netstatdesktop.style.backgroundColor = "#0f0"
+	}else if(result1==false){
+		netstatdesktop.style.backgroundColor = "#8B0000"
+	}
+
+	if(result2==true){
+		netstattruenas.style.backgroundColor = "#0f0"
+	}else if(result2==false){
+		netstattruenas.style.backgroundColor = "#8B0000"
+	}
+	console.clear()
+}
+
+setInterval(async () => {await timer()}, 10000);
