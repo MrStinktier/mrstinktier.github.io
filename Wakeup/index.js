@@ -16,7 +16,6 @@ document.addEventListener("click", function(event) {
 		  	break;
 		case "shutdown-dropdown":
 			if(statdropdown=="disabled"){
-				//document.getElementById('sh-dropdown-contents').className = 'clicked';
 				document.getElementById('sh-dropdown-contents').style.display = "flex";
 				document.getElementById('shutdown-dropdown').innerHTML = "X";
 				statdropdown = "enabled";
