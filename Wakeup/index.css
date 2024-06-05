@@ -95,8 +95,8 @@ body{
     transform: scale(1.1);
 }
 
-.sh-dropdown-contents.clicked{
-    display: flex;
+.sh-dropdown-contents{
+    display: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0.35);
     background-color:white;
     position: absolute;
@@ -110,28 +110,6 @@ body{
     border-radius: 25px;
     z-index: 2;
 }
-
-/*.clicked{
-    -webkit-animation: popup 3s ease;
-    animation: popup 3s ease;
-}
-
-@keyframes popup{
-    0% {display: flex}
-    100% {display: flex;
-        box-shadow: 0 5px 15px rgba(0, 0, 0.35);
-        background-color:white;
-        position: absolute;
-        margin-left: 47.5%;
-        margin-right: 2.5%;
-        top: 22.5%;
-        bottom: 22.5%;
-        height: 55%;
-        width: 50%;
-        min-height: 45px;
-        border-radius: 25px;
-        z-index: 2;}
-}*/
 
 .shutdown, .reboot{
     box-shadow: 0 5px 15px rgba(0, 0, 0.35);
@@ -158,8 +136,4 @@ body{
 
 .reboot:hover{
     transform: scale(1.1);
-}
-
-.sh-dropdown-contents{
-    display: none;
 }

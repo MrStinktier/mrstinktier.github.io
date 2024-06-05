@@ -17,10 +17,12 @@ document.addEventListener("click", function(event) {
 		case "shutdown-dropdown":
 			if(statdropdown=="disabled"){
 				//document.getElementById('sh-dropdown-contents').className = 'clicked';
-				document.getElementById('sh-dropdown-contents').classList.add("clicked");
+				document.getElementById('sh-dropdown-contents').style.display = "flex";
+				document.getElementById('shutdown-dropdown').innerHTML = "X";
 				statdropdown = "enabled";
 			}else if(statdropdown=="enabled"){
-				document.getElementById('sh-dropdown-contents').classList.remove("clicked");
+				document.getElementById('sh-dropdown-contents').style.display = "none";
+				document.getElementById('shutdown-dropdown').innerHTML = "+";
 				statdropdown = "disabled";
 			}
 			break;
