@@ -1,4 +1,5 @@
 var statdropdown = "disabled";
+var statdropdown2 = "disabled";
 var serverURL = "https://backend.mr-stinktier.uk"
 
 timer()
@@ -28,6 +29,23 @@ document.addEventListener("click", function(event) {
 				statdropdown = "disabled";
 			}
 			break;
+		case "shutdown-dropdown2":
+			if(statdropdown2=="disabled"){
+				document.getElementById('sh-dropdown-contents2').style.display = "flex";
+				document.getElementById('shutdown-dropdown2').innerHTML = "X";
+				statdropdown2 = "enabled";
+			}else if(statdropdown2=="enabled"){
+				document.getElementById('sh-dropdown-contents2').style.display = "none";
+				document.getElementById('shutdown-dropdown2').innerHTML = "+";
+				statdropdown2 = "disabled";
+			}
+			break;
+		case "usbaus":
+			usb("off");
+			break;
+		case "usban":
+			usb("on");
+	    	break;
 	  	default:
 			break;
 	}
@@ -53,14 +71,15 @@ async function Shutdown(status) {
     }
 }
 
-/*const checkOnlineStatus = async () => {
-	try {
-	  	const online = await fetch(`${serverURL}/testin`);
-	  	return online.status >= 200 && online.status < 300; // either true or false
-	} catch (err) {
-	  	return false; // definitely offline
-	}
-};*/
+async function usb(status) {
+    const res = await fetch(`https://backend.mr-stinktier.uk/usb?stat=${status}`);
+    console.log(status);
+	if(res.status == 200) {
+        console.log("Worked");
+    }else if(res.status == 400) {
+        console.log("Something went wrong");
+    }
+}
 
 async function checkOnlineStatus(IP){
 	try {
@@ -74,10 +93,11 @@ async function checkOnlineStatus(IP){
 async function timer(){
 	const netstatdesktop = document.getElementById("netstat");
 	const netstattruenas = document.getElementById("netstat2");
+	const netstatRaspnerry = document.getElementById("netstat3");
 	const result1 = await checkOnlineStatus("192.168.115.66");
 	const result2 = await checkOnlineStatus("192.168.115.154");
-	console.log(result1);
-	console.log(result2);
+	const result3 = await checkOnlineStatus("self");
+
 	if(result1==true){
 		netstatdesktop.style.backgroundColor = "#0f0"
 	}else if(result1==false){
@@ -89,7 +109,12 @@ async function timer(){
 	}else if(result2==false){
 		netstattruenas.style.backgroundColor = "#8B0000"
 	}
-	console.clear()
+
+	if(result3==true){
+		netstatRaspnerry.style.backgroundColor = "#0f0"
+	}else if(result3==false){
+		netstatRaspnerry.style.backgroundColor = "#8B0000"
+	}
 }
 
 setInterval(async () => {await timer()}, 10000);
