@@ -46,6 +46,9 @@ document.addEventListener("click", function(event) {
 		case "usban":
 			usb("on");
 	    	break;
+		case "raspi-reboot":
+			usb("reboot");
+			break;
 	  	default:
 			break;
 	}
