@@ -90,7 +90,7 @@ async function checkOnlineStatus(IP){
 		const online = await fetch(`${serverURL}/testin?stat=${IP}`);
 		if(IP=="self"){
 			await online.text().then((text) => {temp = text;});
-			document.getElementById("raspi-text-bottom").innerHTML = temp;
+			document.getElementById("raspi-text-bottom").innerHTML = temp + "°C";
 			console.log(temp);
 		}
 		return online.status >= 200 && online.status < 300; // either true or false
