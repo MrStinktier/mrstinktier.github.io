@@ -42,13 +42,16 @@ document.addEventListener("click", function(event) {
 			}
 			break;
 		case "usbaus":
-			usb("off");
+			button("usboff");
 			break;
 		case "usban":
-			usb("on");
+			button("usbon");
 	    	break;
 		case "raspi-reboot":
-			usb("reboot");
+			button("reboot");
+			break;
+		case "git-push":
+			button("git-push");
 			break;
 	  	default:
 			break;
@@ -57,7 +60,6 @@ document.addEventListener("click", function(event) {
 
 async function wakeup(mac) {
     const res = await fetch(`${serverURL}/start?mac=${mac}`);
-    console.log(mac);
 	if(res.status == 200) {
         console.log("Worked");
     }else if(res.status == 400) {
@@ -67,7 +69,6 @@ async function wakeup(mac) {
 
 async function Shutdown(status) {
     const res = await fetch(`${serverURL}/shutdown?stat=${status}`);
-    console.log(status);
 	if(res.status == 200) {
         console.log("Worked");
     }else if(res.status == 400) {
@@ -75,9 +76,8 @@ async function Shutdown(status) {
     }
 }
 
-async function usb(status) {
-    const res = await fetch(`https://backend.mr-stinktier.uk/usb?stat=${status}`);
-    console.log(status);
+async function button(status) {
+    const res = await fetch(`https://backend.mr-stinktier.uk/button?stat=${status}`);
 	if(res.status == 200) {
         console.log("Worked");
     }else if(res.status == 400) {
@@ -91,7 +91,6 @@ async function checkOnlineStatus(IP){
 		if(IP=="self"){
 			await online.text().then((text) => {temp = text;});
 			document.getElementById("raspi-text-bottom").innerHTML = temp + "°C";
-			console.log(temp);
 		}
 		return online.status >= 200 && online.status < 300; // either true or false
   	} catch (err) {
