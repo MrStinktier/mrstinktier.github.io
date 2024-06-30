@@ -1,6 +1,7 @@
 var statdropdown = "disabled";
 var statdropdown2 = "disabled";
 var serverURL = "https://backend.mr-stinktier.uk"
+var temp;
 
 timer()
 
@@ -87,6 +88,11 @@ async function usb(status) {
 async function checkOnlineStatus(IP){
 	try {
 		const online = await fetch(`${serverURL}/testin?stat=${IP}`);
+		if(IP=="self"){
+			await online.text().then((text) => {temp = text;});
+			document.getElementById("raspi-text-bottom").innerHTML = temp;
+			console.log(temp);
+		}
 		return online.status >= 200 && online.status < 300; // either true or false
   	} catch (err) {
 		return false; // definitely offline
