@@ -50,3 +50,7 @@ body{
 .link3-text{
     margin-top: 40px;
 }
+
+.link1, .link2, .link3{
+    color: #fff;
+}
