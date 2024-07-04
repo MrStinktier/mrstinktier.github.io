@@ -103,7 +103,7 @@ async function timer(){
 	const netstattruenas = document.getElementById("netstat2");
 	const netstatRaspnerry = document.getElementById("netstat3");
 	const result1 = await checkOnlineStatus("192.168.115.66");
-	const result2 = await checkOnlineStatus("192.168.115.154");
+	const result2 = await checkOnlineStatus("192.168.115.86");
 	const result3 = await checkOnlineStatus("self");
 
 	if(result1==true){
