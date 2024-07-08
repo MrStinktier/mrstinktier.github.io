@@ -116,4 +116,10 @@ async function timer(){
 	}
 }
 
+var cars = ["192.168.115.66", "192.168.115.86", "self"];
+
+for (let i = 0; i < cars.length; i++) {
+  console.log(cars);
+}
+
 setInterval(async () => {await timer()}, 10000);
