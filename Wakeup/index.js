@@ -1,5 +1,6 @@
 var statdropdown = "disabled";
 var statdropdown2 = "disabled";
+var statdropdown3 = "disabled";
 var serverURL = "https://backend.mr-stinktier.uk"
 var temp;
 
@@ -41,6 +42,17 @@ document.addEventListener("click", function(event) {
 				statdropdown2 = "disabled";
 			}
 			break;
+		case "shutdown-dropdown3":
+			if(statdropdown3=="disabled"){
+				document.getElementById('sh-dropdown-contents3').style.display = "flex";
+				document.getElementById('shutdown-dropdown3').innerHTML = "X";
+				statdropdown3 = "enabled";
+			}else if(statdropdown3=="enabled"){
+				document.getElementById('sh-dropdown-contents3').style.display = "none";
+				document.getElementById('shutdown-dropdown3').innerHTML = "+";
+				statdropdown3 = "disabled";
+			}
+			break;
 		case "usbaus":
 			button("usboff");
 			break;
@@ -53,6 +65,11 @@ document.addEventListener("click", function(event) {
 		case "git-push":
 			button("git-push");
 			break;
+		case "proxmox-shutdown":
+			button("proxmox-shutdown");
+			break;
+		case "proxmox-reboot":
+			button("proxmox-reboot");
 	  	default:
 			break;
 	}
