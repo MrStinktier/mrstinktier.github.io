@@ -90,30 +90,6 @@ async function checkOnlineStatus(IP){
 }
 
 async function timer(){
-	/*const netstatdesktop = document.getElementById("netstat");
-	const netstattruenas = document.getElementById("netstat2");
-	const netstatRaspnerry = document.getElementById("netstat3");
-	const result1 = await checkOnlineStatus("192.168.115.66");
-	const result2 = await checkOnlineStatus("192.168.115.86");
-	const result3 = await checkOnlineStatus("self");
-
-	if(result1==true){
-		netstatdesktop.style.backgroundColor = "#0f0"
-	}else if(result1==false){
-		netstatdesktop.style.backgroundColor = "#8B0000"
-	}
-
-	if(result2==true){
-		netstattruenas.style.backgroundColor = "#0f0"
-	}else if(result2==false){
-		netstattruenas.style.backgroundColor = "#8B0000"
-	}
-
-	if(result3==true){
-		netstatRaspnerry.style.backgroundColor = "#0f0"
-	}else if(result3==false){
-		netstatRaspnerry.style.backgroundColor = "#8B0000"
-	}*/
 	var cars = ["self", "192.168.115.66", "192.168.115.86"];
 
 	for (let i = 0; i < cars.length; i++) {
