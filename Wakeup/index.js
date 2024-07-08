@@ -116,9 +116,10 @@ async function timer(){
 	}
 }
 
-var cars = ["192.168.115.66", "192.168.115.86", "self"];
+var cars = ["self", "192.168.115.66", "192.168.115.86"];
 
 for (let i = 0; i < cars.length; i++) {
+	const result = await checkOnlineStatus(cars[i]);
   console.log(cars[i]);
 }
 
