@@ -118,10 +118,10 @@ async function timer(){
 
 	for (let i = 0; i < cars.length; i++) {
 		const result = await checkOnlineStatus(cars[i]);
-		if(result=="true"){
-			document.getElementById(cars[i]).style.backgroundColor = "#0f0";
-		}else if(result=="false"){
-			document.getElementById(cars[i]).style.backgroundColor ="#8B0000";
+		if(result==true){
+			document.getElementById(cars[i]).style.backgroundColor = "#0f0"
+		}else if(result==false){
+			document.getElementById(cars[i]).style.backgroundColor ="#8B0000"
 		}
 	}
 }
