@@ -14,10 +14,10 @@ document.addEventListener("click", function(event) {
 			wakeup("a0:b3:cc:eb:0d:d3");
 			break;
 		case "shutdown":
-		  	Shutdown("shutdown");
+		  	button("shutdown");
 		  	break;
 		case "reboot":
-		  	Shutdown("reboot");
+		  	button("reboot");
 		  	break;
 		case "shutdown-dropdown":
 			if(statdropdown=="disabled"){
@@ -48,7 +48,7 @@ document.addEventListener("click", function(event) {
 			button("usbon");
 	    	break;
 		case "raspi-reboot":
-			button("reboot");
+			button("raspi-reboot");
 			break;
 		case "git-push":
 			button("git-push");
@@ -60,15 +60,6 @@ document.addEventListener("click", function(event) {
 
 async function wakeup(mac) {
     const res = await fetch(`${serverURL}/start?mac=${mac}`);
-	if(res.status == 200) {
-        console.log("Worked");
-    }else if(res.status == 400) {
-        console.log("Something went wrong");
-    }
-}
-
-async function Shutdown(status) {
-    const res = await fetch(`${serverURL}/shutdown?stat=${status}`);
 	if(res.status == 200) {
         console.log("Worked");
     }else if(res.status == 400) {
