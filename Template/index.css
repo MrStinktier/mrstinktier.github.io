@@ -10,8 +10,24 @@ body{
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.headtext{
-    margin-top: 10%;
+.container{
+    display: flexbox;
+    position: relative;
+    width: 65%;
+    height: 55%;
+    background-color: #374769;
+    align-items: center;
+    justify-content: center;
+}
+
+.container div{
+    position: relative;
+    margin-left: 5%;
+    margin-top: 2.25%;
+    background-color: white;
+    width: 90%;
+    height: 30%;
 }
