@@ -15,10 +15,13 @@ body{
 
 .container{
     width: 80%;
-    height: 90%;
-    background-color: #232931;
+    height: 50%;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #232931;
     border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);*/
 }
 
 .pc1-button-div{
@@ -31,6 +34,7 @@ body{
     width: 90%;
     min-height: 90px;
     border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
 }
 
 .pc1-button{
@@ -76,6 +80,7 @@ body{
     width: 90%;
     min-height: 90px;
     border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
 }
 
 .shutdown-dropdown{
