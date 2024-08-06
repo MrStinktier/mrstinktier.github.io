@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.body.innerHTML += "<div id='wrapper' style=' z-index:-1; width: 100%; height: 100%; position: absolute; align-items: center;'>\
+    document.body.innerHTML += "<div id='wrapper' style=' z-index:-1; width: 100%; height: 100%; position: absolute;'>\
                                     <div id='square1' style='top:12%; left:42%; position:absolute; height: 60px;width: 60px; border-radius: 25px; background-color: transparent; border: 6px solid rgba(255,255,255,08);'></div>\
                                     <div id='square2' style='top:70%; left:50%; position:absolute; height: 60px;width: 60px; border-radius: 25px; background-color: transparent; border: 6px solid rgba(255,255,255,08);'></div>\
                                     <div id='square3' style='top:17%; left:6%; position:absolute; height: 60px;width: 60px; border-radius: 25px; background-color: transparent; border: 6px solid rgba(255,255,255,08);'></div>\
