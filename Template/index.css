@@ -13,21 +13,38 @@ body{
     align-items: center;
 }
 
-.container{
-    display: flexbox;
-    position: relative;
-    width: 65%;
-    height: 55%;
-    background-color: #374769;
-    align-items: center;
-    justify-content: center;
+.desktopdiv, .raspydiv, .nasdiv{
+    position: absolute;
+    background-color: white;
+    width: 60%;
+    height: 15%;
 }
 
-.container div{
-    position: relative;
-    margin-left: 5%;
-    margin-top: 2.25%;
-    background-color: white;
-    width: 90%;
-    height: 30%;
+.desktopdiv{
+    margin-bottom: 400px;
+}
+
+.nasdiv{
+    margin-top: 400px;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        height: 150vh;
+    }
+
+    .desktopdiv, .raspydiv, .nasdiv{
+        position: absolute;
+        background-color: white;
+        width: 60%;
+        height: 40%;
+    }
+    
+    .desktopdiv{
+        margin-bottom: 800px;
+    }
+    
+    .nasdiv{
+        margin-top: 800px;
+    }
 }
