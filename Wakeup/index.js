@@ -100,7 +100,7 @@ async function checkOnlineStatus(IP){
 			await online.text().then((text) => {temp = text;});
 			document.getElementById("raspi-text-bottom").innerHTML = temp + "°C";
 		}
-		return online.status >= 200 && online.status < 300; // either true or false
+		return online.status;
   	} catch (err) {
 		return false; // definitely offline
   	}
@@ -111,9 +111,9 @@ async function timer(){
 
 	for (let i = 0; i < cars.length; i++) {
 		const result = await checkOnlineStatus(cars[i]);
-		if(result==true){
+		if(result==200){
 			document.getElementById(cars[i]).style.backgroundColor = "#0f0"
-		}else if(result==false){
+		}else if(result==300){
 			document.getElementById(cars[i]).style.backgroundColor ="#8B0000"
 		}
 	}
