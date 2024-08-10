@@ -28,23 +28,70 @@ body{
     margin-top: 400px;
 }
 
+.b1:hover, .b2:hover, .b3:hover, .b4:hover{
+    transform: scale(1.1);
+}
+
 @media screen and (max-width: 600px) {
     body{
-        height: 150vh;
+        height: 125vh;
     }
 
     .desktopdiv, .raspydiv, .nasdiv{
         position: absolute;
+        box-shadow: 0 5px 15px rgba(0, 0, 0.35);
         background-color: white;
         width: 60%;
-        height: 40%;
+        height: 32.5%;
+        border-radius: 25px;
     }
     
     .desktopdiv{
-        margin-bottom: 800px;
+        margin-bottom: 600px;
     }
     
     .nasdiv{
-        margin-top: 800px;
+        margin-top: 600px;
+    }
+
+    .indivheader{
+        margin-top: 5%;
+    }
+
+    .indivheader, .indivbottom{
+        margin-left: 5%;
+    }
+
+    .b1, .b2, .b3, .b4{
+        box-shadow: 0 5px 15px rgba(0, 0, 0.35);
+        background-color: black;
+        color: white;
+        position: absolute;
+        height: 15%;
+        width: 45%;
+        border-radius: 25px;
+        margin-left: 2.5%;
+    }
+
+    .b1, .b2{
+        margin-top: 15%;
+    }
+
+    .b3, .b4{
+        margin-top: 40%;
+    }
+
+    .b2, .b4{
+        margin-left: 52.5%;
+    }
+
+    .netstat{
+        position: absolute;
+        background-color: #fadb2d;
+        width: 25px;
+        height: 25px;
+        bottom: 91%;
+        left: 91%;
+        border-radius: 25px;
     }
 }
