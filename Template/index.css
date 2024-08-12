@@ -32,6 +32,20 @@ body{
     transform: scale(1.1);
 }
 
+.netstat{
+    position: absolute;
+    background-color: #fadb2d;
+    width: 25px;
+    height: 25px;
+    bottom: 91%;
+    left: 91%;
+    border-radius: 25px;
+}
+
+.buttons{
+    background-color: #fadb2d;
+}
+
 @media screen and (max-width: 600px) {
     body{
         height: 125vh;
@@ -93,5 +107,11 @@ body{
         bottom: 91%;
         left: 91%;
         border-radius: 25px;
+    }
+
+    .buttons{
+        position: absolute;
+        height: 100%;
+        width: 100%;
     }
 }

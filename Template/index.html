@@ -9,29 +9,35 @@
 </head>
 <body>
     <div class="desktopdiv">
-        <div class="netstat" id="desktopnetstat"></div>
+        <div class="netstat" id="192.168.115.66"></div>
         <h1 class="indivheader">Desktop</h1>
         <p class="indivbottom">Hier habe ich Funktionen für meinen PC</p>
-        <button type="button" class="b1" id="desktopwakeup">Wakeup</button>
-        <button type="button" class="b3" id="desktopshutdown">Shutdown</button>
-        <button type="button" class="b4" id="desktopreboot">Reboot</button>
+        <div class="buttons" id="desktopbuttons">
+            <button type="button" class="b1" id="desktopwakeup">Wakeup</button>
+            <button type="button" class="b3" id="desktopshutdown">Shutdown</button>
+            <button type="button" class="b4" id="desktopreboot">Reboot</button>
+        </div>
     </div>
     <div class="raspydiv">
-        <div class="netstat" id="desktopnetstat"></div>
+        <div class="netstat" id="self"></div>
         <h1 class="indivheader">Raspberry</h1>
         <p class="indivbottom" id="raspy-temp">Raspberry-temp</p>
-        <button type="button" class="b1" id="raspywakeup">Wakeup</button>
-        <button type="button" class="b2" id="raspygitpush">Git-Push</button>
-        <button type="button" class="b3" id="raspyshutdown">Shutdown</button>
-        <button type="button" class="b4" id="raspyreboot">Reboot</button>
+        <div class="buttons" id="raspybuttons">
+            <button type="button" class="b1" id="raspywakeup">Wakeup</button>
+            <button type="button" class="b2" id="raspygitpush">Git-Push</button>
+            <button type="button" class="b3" id="raspyshutdown">Shutdown</button>
+            <button type="button" class="b4" id="raspyreboot">Reboot</button>
+        </div>
     </div>
     <div class="nasdiv">
-        <div class="netstat" id="desktopnetstat"></div>
+        <div class="netstat" id="192.168.115.86"></div>
         <h1 class="indivheader">NAS</h1>
         <p class="indivbottom">Hier habe ich Funktionen für meine NAS</p>
-        <button type="button" class="b1" id="naswakeup">Wakeup</button>
-        <button type="button" class="b3" id="nasshutdown">Shutdown</button>
-        <button type="button" class="b4" id="nasreboot">Reboot</button>
+        <div class="buttons" id="nasbuttons">
+            <button type="button" class="b1" id="naswakeup">Wakeup</button>
+            <button type="button" class="b3" id="nasshutdown">Shutdown</button>
+            <button type="button" class="b4" id="nasreboot">Reboot</button>
+        </div>
     </div>
     <script src="./index.js"></script>
 </body>
