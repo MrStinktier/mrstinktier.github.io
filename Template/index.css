@@ -16,6 +16,8 @@ body{
 .desktopdiv, .raspydiv, .nasdiv{
     position: absolute;
     background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
     width: 60%;
     height: 15%;
 }
@@ -28,22 +30,81 @@ body{
     margin-top: 400px;
 }
 
-.b1:hover, .b2:hover, .b3:hover, .b4:hover{
+.b1:hover, .b2:hover, .b3:hover, .b4:hover, .buttonscollapse:hover{
     transform: scale(1.1);
-}
-
-.netstat{
-    position: absolute;
-    background-color: #fadb2d;
-    width: 25px;
-    height: 25px;
-    bottom: 91%;
-    left: 91%;
-    border-radius: 25px;
 }
 
 .buttons{
     background-color: #fadb2d;
+}
+
+.b1{
+    position: absolute;
+}
+
+.outerbuttons{
+    position: absolute;
+}
+
+.buttonscollapse{
+    position: absolute;
+}
+
+@media screen and (min-width:600px) {
+
+    .desktopdiv, .raspydiv, .nasdiv{
+        display: flex;
+        align-items: center;
+    }
+
+    .indivheader, .indivbottom{
+        position: absolute;
+        margin-left: 5%;
+    }
+
+    .indivheader{
+        top: 25%;
+    }
+
+    .indivbottom{
+        top: 50%;
+    }
+
+    .buttons{
+        position: absolute;
+    }
+
+    .buttonscollapse{
+        z-index: 1;
+        width: 20px;
+        height: 20px;
+        right: -1%;
+        top: -20%;
+        border-radius: 25px;
+    }
+
+    .b1{
+        right: 10%;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+
+    .outerbuttons{
+        right: 7.5%;
+        width: 10%;
+        height: 25%;
+    }
+
+    .netstat{
+        position: absolute;
+        background-color: #fadb2d;
+        width: 25px;
+        height: 25px;
+        bottom: 87.5%;
+        right: -0.5%;
+        border-radius: 25px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -52,12 +113,9 @@ body{
     }
 
     .desktopdiv, .raspydiv, .nasdiv{
-        position: absolute;
-        box-shadow: 0 5px 15px rgba(0, 0, 0.35);
         background-color: white;
         width: 60%;
         height: 32.5%;
-        border-radius: 25px;
     }
     
     .desktopdiv{
@@ -113,5 +171,15 @@ body{
         position: absolute;
         height: 100%;
         width: 100%;
+    }
+
+    .outerbuttons{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .buttonscollapse{
+        display: none;
     }
 }

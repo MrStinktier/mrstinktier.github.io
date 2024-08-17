@@ -75,7 +75,7 @@ async function timer(){
 		const result = await checkOnlineStatus(cars[i]);
 		if(result==200){
 			document.getElementById(cars[i]).style.backgroundColor = "#0f0"
-		}else if(result==301){
+		}else if(result==300){
 			document.getElementById(cars[i]).style.backgroundColor ="#8B0000"
 		}
 	}
