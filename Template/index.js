@@ -40,6 +40,39 @@ document.addEventListener("click", function(event) {
             break;
         case "nasreboot":
             usage("nasreboot");
+        case "desktopbuttonscollapse":
+            if(statdropdown=="disabled"){
+                document.getElementById('desktopbuttons').style.display = "flex";
+                document.getElementById('desktopbuttonscollapse').innerHTML = "X";
+                statdropdown = "enabled";
+            }else if(statdropdown=="enabled"){
+                document.getElementById('desktopbuttons').style.display = "none";
+                document.getElementById('desktopbuttonscollapse').innerHTML = "+";
+                statdropdown = "disabled";
+            }
+            break;
+        case "raspybuttonscollapse":
+            if(statdropdown2=="disabled"){
+                document.getElementById('raspybuttons').style.display = "flex";
+                document.getElementById('raspybuttonscollapse').innerHTML = "X";
+                statdropdown2 = "enabled";
+            }else if(statdropdown2=="enabled"){
+                document.getElementById('raspybuttons').style.display = "none";
+                document.getElementById('raspybuttonscollapse').innerHTML = "+";
+                statdropdown2 = "disabled";
+            }
+            break;
+        case "nasbuttonscollapse":
+            if(statdropdown3=="disabled"){
+                document.getElementById('nasbuttons').style.display = "flex";
+                document.getElementById('nasbuttonscollapse').innerHTML = "X";
+                statdropdown3 = "enabled";
+            }else if(statdropdown3=="enabled"){
+                document.getElementById('nasbuttons').style.display = "none";
+                document.getElementById('nasbuttonscollapse').innerHTML = "+";
+                statdropdown3 = "disabled";
+            }
+            break;
         default:
             break;
     }
