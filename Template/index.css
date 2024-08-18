@@ -16,6 +16,8 @@ body{
 .desktopdiv, .raspydiv, .nasdiv{
     position: absolute;
     background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
     width: 60%;
     height: 15%;
 }
@@ -28,22 +30,109 @@ body{
     margin-top: 400px;
 }
 
-.b1:hover, .b2:hover, .b3:hover, .b4:hover{
+.b1:hover, .b2:hover, .b3:hover, .b4:hover, .b2r:hover, .b3r:hover, .b4r:hover, .buttonscollapse:hover{
     transform: scale(1.1);
 }
 
-.netstat{
+.b1{
     position: absolute;
-    background-color: #fadb2d;
-    width: 25px;
-    height: 25px;
-    bottom: 91%;
-    left: 91%;
+}
+
+.outerbuttons{
+    position: absolute;
+}
+
+.buttonscollapse{
+    position: absolute;
+}
+
+.b1, .b2, .b3, .b4 ,.b2r, .b3r, .b4r, .buttonscollapse{
+    box-shadow: 0 5px 15px rgba(0, 0, 0.35);
+    background-color: black;
+    color: white;
     border-radius: 25px;
 }
 
-.buttons{
-    background-color: #fadb2d;
+@media screen and (min-width:600px) {
+
+    .desktopdiv, .raspydiv, .nasdiv{
+        display: flex;
+        align-items: center;
+    }
+
+    .indivheader, .indivbottom{
+        position: absolute;
+        margin-left: 5%;
+    }
+
+    .indivheader{
+        top: 25%;
+    }
+
+    .indivbottom{
+        top: 50%;
+    }
+
+    .buttonscollapse{
+        z-index: 1;
+        width: 20px;
+        height: 20px;
+        right: -1%;
+        top: -20%;
+    }
+
+    .b1, .b2, .b3, .b4 ,.b2r, .b3r, .b4r{   
+        height: 65%;
+        width: 30%;
+    }
+
+    .b1{
+        right: 10%;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+
+    .outerbuttons{
+        right: 7.5%;
+        width: 10%;
+        height: 25%;
+    }
+
+    .buttons{
+        background-color: white;
+        border-radius: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0.35);
+        position: absolute;
+        display: none;
+        right: 8%;
+        width: 30%;
+        height: 35%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .b3r{
+        margin: 2.5%;
+    }
+
+    .b3{
+        margin-right: 5%;
+    }
+
+    .b4{
+        margin-left: 5%;
+    }
+
+    .netstat{
+        position: absolute;
+        background-color: #fadb2d;
+        width: 25px;
+        height: 25px;
+        bottom: 87.5%;
+        right: -0.5%;
+        border-radius: 25px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -52,12 +141,9 @@ body{
     }
 
     .desktopdiv, .raspydiv, .nasdiv{
-        position: absolute;
-        box-shadow: 0 5px 15px rgba(0, 0, 0.35);
         background-color: white;
         width: 60%;
         height: 32.5%;
-        border-radius: 25px;
     }
     
     .desktopdiv{
@@ -76,26 +162,22 @@ body{
         margin-left: 5%;
     }
 
-    .b1, .b2, .b3, .b4{
-        box-shadow: 0 5px 15px rgba(0, 0, 0.35);
-        background-color: black;
-        color: white;
+    .b1, .b2, .b3, .b4 ,.b2r, .b3r, .b4r{
         position: absolute;
         height: 15%;
         width: 45%;
-        border-radius: 25px;
         margin-left: 2.5%;
     }
 
-    .b1, .b2{
+    .b1, .b2, .b2r{
         margin-top: 15%;
     }
 
-    .b3, .b4{
+    .b3, .b4, .b3r, .b4r{
         margin-top: 40%;
     }
 
-    .b2, .b4{
+    .b2, .b4, .b4r{
         margin-left: 52.5%;
     }
 
@@ -113,5 +195,15 @@ body{
         position: absolute;
         height: 100%;
         width: 100%;
+    }
+
+    .outerbuttons{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .buttonscollapse{
+        display: none;
     }
 }
