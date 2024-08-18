@@ -7,8 +7,6 @@ var statdropdown3 = "disabled";
 var serverURL = "https://backend.mr-stinktier.uk"
 var temp;
 
-timer()
-
 document.addEventListener("click", function(event) {
 	switch (event.target.id) {
         case "desktopwakeup":
@@ -86,34 +84,3 @@ async function usage(status) {
         console.log("Something went wrong");
     }
 }
-
-async function checkOnlineStatus(IP){
-	try {
-		const online = await fetch(`${serverURL}/testin?stat=${IP}`);
-		if(IP=="self"){
-			await online.text().then((text) => {temp = text;});
-			document.getElementById("raspy-temp").innerHTML = temp + "°C";
-		}
-		return online.status;
-  	} catch (err) {
-        console.log(err);
-		return false; // definitely offline
-  	}
-}
-
-async function timer(){
-	var cars = ["self", "192.168.115.66", "192.168.115.86"];
-
-	for (let i = 0; i < cars.length; i++) {
-		const result = await checkOnlineStatus(cars[i]);
-		if(result==200){
-			document.getElementById(cars[i]).style.backgroundColor = "#0f0"
-		}else if(result==300){
-			document.getElementById(cars[i]).style.backgroundColor ="#8B0000"
-		}
-	}
-
-    
-}
-
-setInterval(async () => {await timer()}, 10000);
