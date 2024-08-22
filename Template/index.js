@@ -18,17 +18,17 @@ document.addEventListener("click", function(event) {
         case "desktopreboot":
             usage("desktop","reboot");
             break;
-        case "raspberrywakeup":
-            usage("raspberry", "wakeup");
+        case "raspyreboot":
+            usage("raspberry", "reboot");
             break;
         case "raspygitpush":
             usage("raspberry", "gitpush");
             break;
-        case "raspyshutdown":
-            usage("raspberry", "shutdown");
+        case "raspyusbon":
+            usage("raspberry", "usbon");
             break;
-        case "raspyreboot":
-            usage("raspberry", "reboot");
+        case "raspyusboff":
+            usage("raspberry", "usboff");
             break;
         case "naswakeup":
             usage("nas", "wakeup");
@@ -38,6 +38,7 @@ document.addEventListener("click", function(event) {
             break;
         case "nasreboot":
             usage("nas", "reboot");
+            break;
         case "desktopbuttonscollapse":
             if(statdropdown=="disabled"){
                 document.getElementById('desktopbuttons').style.display = "flex";
