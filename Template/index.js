@@ -10,34 +10,34 @@ var temp;
 document.addEventListener("click", function(event) {
 	switch (event.target.id) {
         case "desktopwakeup":
-            usage(desktopmac);
+            usage("desktop", "wakeup");
             break;
         case "desktopshutdown":
-            usage("desktopshutdown");
+            usage("desktop", "shutdown");
             break;
         case "desktopreboot":
-            usage("desktopreboot");
+            usage("desktop","reboot");
             break;
         case "raspberrywakeup":
-            usage("raspberrywakeup");
+            usage("raspberry", "wakeup");
             break;
         case "raspygitpush":
-            usage("raspberrygitpush");
+            usage("raspberry", "gitpush");
             break;
         case "raspyshutdown":
-            usage("raspyshutdown");
+            usage("raspberry", "shutdown");
             break;
         case "raspyreboot":
-            usage("raspyreboot");
+            usage("raspberry", "reboot");
             break;
         case "naswakeup":
-            usage(nasmac);
+            usage("nas", "wakeup");
             break;
         case "nasshutdown":
-            usage("nasshutdown");
+            usage("nas", "shutdown");
             break;
         case "nasreboot":
-            usage("nasreboot");
+            usage("nas", "reboot");
         case "desktopbuttonscollapse":
             if(statdropdown=="disabled"){
                 document.getElementById('desktopbuttons').style.display = "flex";
@@ -76,8 +76,8 @@ document.addEventListener("click", function(event) {
     }
 });
 
-async function usage(status) {
-    const res = await fetch(`${serverURL}/usage?stat=${status}`);
+async function usage(id, status) {
+    const res = await fetch(`${serverURL}/usage?id=${id}&stat=${status}`);
 	if(res.status == 200) {
         console.log("Worked");
     }else if(res.status == 400) {
