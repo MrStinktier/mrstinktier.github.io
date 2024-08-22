@@ -23,7 +23,9 @@ async function timer(){
 		if(result==200){
 			document.getElementById(cars[i]).style.backgroundColor = "#0f0"
 		}else if(result>=300){
-			document.getElementById(cars[i]).style.backgroundColor ="#8B0000"
+			document.getElementById(cars[i]).style.backgroundColor = "#8B0000"
+		}else{
+			document.getElementById(cars[i]).style.backgroundColor = "#fadb2d"
 		}
 	}
 
