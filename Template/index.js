@@ -1,6 +1,3 @@
-var desktopmac = "00:13:3b:0c:64:3f";
-var nasmac = "a0:b3:cc:eb:0d:d3";
-
 var statdropdown = "disabled";
 var statdropdown2 = "disabled";
 var statdropdown3 = "disabled";
