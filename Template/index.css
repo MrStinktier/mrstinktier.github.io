@@ -162,6 +162,10 @@ body{
         margin-left: 5%;
     }
 
+    .b1{
+        z-index: 100;
+    }
+
     .b1, .b2, .b3, .b4 ,.b2r, .b3r, .b4r{
         position: absolute;
         height: 15%;
