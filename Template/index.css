@@ -166,7 +166,7 @@ body{
         z-index: 100;
     }
 
-    .b1, .b2, .b3, .b4 ,.b2r, .b3r, .b4r{
+    .b1, .b2, .b3, .b4 , .b2r, .b3r, .b4r{
         position: absolute;
         height: 15%;
         width: 45%;
