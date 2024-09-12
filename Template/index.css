@@ -59,6 +59,7 @@ body{
     .desktopdiv, .raspydiv, .nasdiv{
         display: flex;
         align-items: center;
+        z-index: 2;
     }
 
     .indivheader, .indivbottom{
