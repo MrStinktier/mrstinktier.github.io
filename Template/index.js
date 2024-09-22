@@ -2,12 +2,29 @@ var statdropdown = "disabled";
 var statdropdown2 = "disabled";
 var statdropdown3 = "disabled";
 var serverURL = "https://backend.mr-stinktier.uk"
+var wakeuppressed = false;
 var temp;
 
-document.addEventListener("click", function(event) {
+if(wakeuppressed){
+    print(document.getElementById("192.168.115.66").style.backgroundColor);
+    if(document.getElementById("192.168.115.66").style.backgroundColor == "#0f0"){
+        window.location.href = "parsec://";
+        wakeuppressed = false;
+    }
+}
+
+document.addEventListener("click", async function(event) {
 	switch (event.target.id) {
         case "desktopwakeup":
-            usage("desktop", "wakeup");
+            if(usage("desktop", "wakeup")){
+                wakeuppressed = true;
+                if(wakeuppressed){
+                    if(await checkOnlineStatus("192.168.115.66") == "200"){
+                        window.location.href = "parsec://DESKTOP-VCS1UEK";
+                        wakeuppressed = false;
+                    }
+                }
+            }
             break;
         case "desktopshutdown":
             usage("desktop", "shutdown");
@@ -78,7 +95,9 @@ async function usage(id, status) {
     const res = await fetch(`${serverURL}/usage?id=${id}&stat=${status}`);
 	if(res.status == 200) {
         console.log("Worked");
+        return true;
     }else if(res.status == 400) {
         console.log("Something went wrong");
+        return false;
     }
 }
