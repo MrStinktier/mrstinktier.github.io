@@ -18,11 +18,11 @@ document.addEventListener("click", async function(event) {
         case "desktopwakeup":
             if(usage("desktop", "wakeup")){
                 wakeuppressed = true;
-                if(wakeuppressed){
-                    if(await checkOnlineStatus("192.168.115.66") == "200"){
-                        window.location.href = "parsec://DESKTOP-VCS1UEK";
-                        wakeuppressed = false;
-                    }
+            }
+            if(wakeuppressed){
+                if(await checkOnlineStatus("192.168.115.66") == "200"){
+                    window.location.href = "parsec://DESKTOP-VCS1UEK";
+                    wakeuppressed = false;
                 }
             }
             break;
