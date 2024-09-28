@@ -19,7 +19,7 @@ document.addEventListener("click", async function(event) {
             if(usage("desktop", "wakeup")){
                 wakeuppressed = true;
             }
-            if(wakeuppressed){
+            while(wakeuppressed){
                 if(await checkOnlineStatus("192.168.115.66") == "200"){
                     window.location.href = "parsec://DESKTOP-VCS1UEK";
                     wakeuppressed = false;
