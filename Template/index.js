@@ -6,8 +6,8 @@ var wakeuppressed = false;
 var temp;
 
 if(wakeuppressed){
-    print(document.getElementById("192.168.115.66").style.backgroundColor);
-    if(document.getElementById("192.168.115.66").style.backgroundColor == "#0f0"){
+    print(document.getElementById("192.168.115.101").style.backgroundColor);
+    if(document.getElementById("192.168.115.101").style.backgroundColor == "#0f0"){
         window.location.href = "parsec://";
         wakeuppressed = false;
     }
@@ -20,7 +20,7 @@ document.addEventListener("click", async function(event) {
                 wakeuppressed = true;
             }
             while(wakeuppressed){
-                if(await checkOnlineStatus("192.168.115.66") == "200"){
+                if(await checkOnlineStatus("192.168.115.101") == "200"){
                     window.location.href = "parsec://DESKTOP-VCS1UEK";
                     wakeuppressed = false;
                 }

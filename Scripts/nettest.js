@@ -16,7 +16,7 @@ async function checkOnlineStatus(IP){
 }
 
 async function timer(){
-	var cars = ["self", "192.168.115.66", "192.168.115.86"];
+	var cars = ["self", "192.168.115.101", "192.168.115.86"];
 
 	for (let i = 0; i < cars.length; i++) {
 		const result = await checkOnlineStatus(cars[i]);
